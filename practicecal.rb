@@ -21,6 +21,46 @@ end
 
 cal_string = cal.to_ical
 
-
-
 File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }
+
+def convert_to_time (number)
+	if number >= 12
+		number_s = 
+			if number == 12
+				number.to_s
+			else
+				(number % 12).to_s
+			end
+		number_s += "pm"		 
+	else
+		number_s = 
+			if number == 0
+				number = 12
+				number.to_s
+			else
+				number.to_s
+			end
+		number_s += "am"
+	end
+
+	return number_s
+end
+
+
+
+
+get '/scheduler' do
+	timearr = Array.new
+	(0...23).each do |hour|
+		starttime = hour 
+		endtime = hour + 1
+		timestr = convert_to_time(starttime) + " to " + convert_to_time(endtime)
+		timearr[hour] = timestr
+	end
+
+	dayarr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+
+ 	erb :scheduler, locals: {timearr: timearr, dayarr: dayarr}
+
+end
