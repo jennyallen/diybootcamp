@@ -1,3 +1,40 @@
+body
+{
+background-image:url(http://fmonster.files.wordpress.com/2010/04/fifties-housewife-apron_2.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+background-color: white;
+font-family: "Oswald";
+}
+
+h1
+{
+	color: #FF0000;
+	text-shadow: 1px 2px black;
+}
+
+#courses{
+	background-color: #7F0000 ;
+	font-family: "Oswald";
+	color: black;
+}
+
+#availability{
+	background-color: #FF0000;
+	font-family: "Oswald";
+	color: black;
+}
+
+#schedule{
+	background-color: #7F2626;
+	font-family: "Oswald";
+	color: black;
+}
+
+#container{
+	visibility: hidden;
+}
+
 .day{
 	display: inline-block;
 }
