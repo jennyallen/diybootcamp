@@ -46,8 +46,13 @@ def convert_to_time (number)
 	return number_s
 end
 
+get '/' do
+	erb :index
+end
 
-
+get '/courses' do
+	erb :courseselection
+end
 
 get '/scheduler' do
 
@@ -60,6 +65,10 @@ end
 
 get '/scheduler/yournewschedule' do
 	erb :userschedule
+end
+
+get '/about' do 
+	erb :about
 end
 
 
