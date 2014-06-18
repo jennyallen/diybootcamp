@@ -50,13 +50,6 @@ end
 
 
 get '/scheduler' do
-	# timearr = Array.new
-	# (0...23).each do |hour|
-	# 	starttime = hour 
-	# 	endtime = hour + 1
-	# 	timestr = convert_to_time(starttime) + " to " + convert_to_time(endtime)
-	# 	timearr[hour] = timestr
-	# end
 
 	dayarr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -73,8 +66,9 @@ end
 post '/scheduler/yournewschedule' do 
 
 	# dayarr = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-	starttime = params['starttime'].to_s
-	endtime = params['endtime'].to_s
+	startdate = params['startdate']
+	starttime = params['Monday-starttime'].to_s
+	endtime = params['Monday-endtime'].to_s
 	puts starttime
 	puts endtime
 	erb :userschedule

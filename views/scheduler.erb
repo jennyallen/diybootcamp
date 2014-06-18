@@ -12,14 +12,21 @@
   		<script type="text/javascript" src="pickadate/picker.date.js"></script>
 	</head>
 
-	<body> 
-		Availability
+	<body>
 		<form action = "/scheduler/yournewschedule" method="post">
 			When do you want to start?
-
-			How many hours a week do you want to work?
 			<input name="startdate" placeholder="Start Date" type="text" class="datepicker"/>
+			<br>
+			
+			<br>
+			How many hours a week do you want to work?
+			<input type="text" name = "hoursPerWeek">
+			<br>
+
+			<br>
 			When are you available?
+			<br>
+			
 			<%dayarr.each do |day| %>
 				<%=day%>
 				<input name="<%=day%>-starttime" placeholder="Start Time" type="text" class="timepicker"/>
