@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
 def courses_to_hasharray
 # Get a Nokogiri::HTML:Document for the page we’re interested in...
@@ -17,13 +18,16 @@ def courses_to_hasharray
 	  				:title => row.css('td.views-field-title').text.strip!})
 	end
 
+	puts 'return courses hasharray'
+
 	return courses 
 
 end
 
 def get_sessions(hasharray)
-	hasharray.each do |course|
-		url = 'http://oyc.yale.edu/courses' + course[:link] + '#sessions'
+
+	hasharray.each_with_index do |course_hash, i|
+		url = 'http://oyc.yale.edu' + course_hash[:link] + '#sessions'
 		doc = Nokogiri::HTML(open(url))
 
 		sessions = []
@@ -33,9 +37,12 @@ def get_sessions(hasharray)
 						   :link => row.css('td.views-field-field-session-display-title-value').css('a')[0]['href']})
 		end
 
-		course[:sessions => sessions]
-
+		course_hash[:sessions]=sessions
+		course_hash[:time]=sessions.length*2 #Time in hours for (1hr video + 1hr study)/lecture
+		hasharray[i] = course_hash
 	end
+
+	return hasharray
 end
 
 def coursearray
