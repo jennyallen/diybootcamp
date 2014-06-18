@@ -9,7 +9,7 @@ font-family: "Oswald";
 
 h1
 {
-	color: #FF0000;
+	color: #7F0000;
 	text-shadow: 1px 2px black;
 }
 a:link, a:visited {
@@ -18,12 +18,12 @@ a:link, a:visited {
 	}
 
 a:hover {
-	text-shadow: 1px 1px white;
+	text-shadow: 0px 0px 10px white;;
 	color: black;
 	}
 
 a:active {
-	text-shadow: 1px 1px white;
+	text-shadow: 0px 0px 10px white;;
 	color: gray;
 	}
 
@@ -46,6 +46,12 @@ a:active {
 	color: black;
 }
 
-#container{
-	visibility: hidden;
+#about{
+	background-color: #FF3D30;
+	font-family: "Oswald";
+	color: black;
 }
+#container{
+	min-height: 50%;
+}
+
