@@ -1,30 +1,32 @@
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Generate your schedule</title>
-</head>
+	<head>
+		<title>PICKATIME</title>
+		<link href="pickadate/default.date.css" rel="stylesheet" type="text/css">
+		<link href="pickadate/default.time.css" rel="stylesheet" type="text/css">
+		<link href="pickadate/default.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>  	
+		<script type="text/javascript" src="script.js"></script>
+  		<script type="text/javascript" src="pickadate/picker.js"></script>
+  		<script type="text/javascript" src="pickadate/picker.time.js"></script>
+  		<script type="text/javascript" src="pickadate/legacy.js"></script>
+  		<script type="text/javascript" src="pickadate/picker.date.js"></script>
+	</head>
 
-<body>
-	<form>
-		<table class = "schedule">
-			<tr>
-				<%dayarr.each do |day|%>
-					<th><input class = "day" type="checkbox" name="DayOfWeek" value="<%=day%>"> <%=day%></th>
-				<%end%>
-			</tr>
-			
-			<%timearr.each_with_index do |time, timeindex|%>
-				<tr>
-					<%(0..6).each do |dayindex|%>
-					<td>
-						<input class = "time" type = "checkbox" name="DayOfWeek" 
-						value="<%=dayarr[dayindex]%>-<%=timeindex.to_s%>"> <%=time%>
-					</td>
-					<%end%>
-				</tr>
-			<%end%>
-			
-		</table>
-	<input type="submit" value="Submit">
-	</form>
-</body>
+	<body> 
+		Availability
+		<form action = "/scheduler/yournewschedule" method="post">
+			When do you want to start?
+
+			How many hours a week do you want to work?
+			<input name="startdate" placeholder="Start Date" type="text" class="datepicker"/>
+			When are you available?
+			<%dayarr.each do |day| %>
+				<%=day%>
+				<input name="<%=day%>-starttime" placeholder="Start Time" type="text" class="timepicker"/>
+				<input name="<%=day%>-endtime" placeholder="End Time" type="text" class="timepicker"/>
+				<br>
+				<%end%>	
+				<input type = "submit">
+		</form>
+	</body>
+</html>
