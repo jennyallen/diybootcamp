@@ -1,0 +1,30 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Generate your schedule</title>
+</head>
+
+<body>
+	<form>
+		<table class = "schedule">
+			<tr>
+				<%dayarr.each do |day|%>
+					<th><input class = "day" type="checkbox" name="DayOfWeek" value="<%=day%>"> <%=day%></th>
+				<%end%>
+			</tr>
+			
+			<%timearr.each_with_index do |time, timeindex|%>
+				<tr>
+					<%(0..6).each do |dayindex|%>
+					<td>
+						<input class = "time" type = "checkbox" name="DayOfWeek" 
+						value="<%=dayarr[dayindex]%>-<%=timeindex.to_s%>"> <%=time%>
+					</td>
+					<%end%>
+				</tr>
+			<%end%>
+			
+		</table>
+	<input type="submit" value="Submit">
+	</form>
+</body>

@@ -1,0 +1,14 @@
+.day{
+	display: inline-block;
+}
+
+.schedule {
+	margin: auto;
+	text-align: center;
+	width: 91%;
+	border: solid;
+}
+
+td, th {
+	width:13%
+}
