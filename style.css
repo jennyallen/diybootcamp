@@ -12,12 +12,27 @@ h1
 	color: #FF0000;
 	text-shadow: 1px 2px black;
 }
+a:link, a:visited {
+	text-decoration: none;
+	color: black;
+	}
+
+a:hover {
+	text-shadow: 1px 1px white;
+	color: black;
+	}
+
+a:active {
+	text-shadow: 1px 1px white;
+	color: gray;
+	}
 
 #courses{
 	background-color: #7F0000 ;
 	font-family: "Oswald";
 	color: black;
 }
+
 
 #availability{
 	background-color: #FF0000;
@@ -33,19 +48,4 @@ h1
 
 #container{
 	visibility: hidden;
-}
-
-.day{
-	display: inline-block;
-}
-
-.schedule {
-	margin: auto;
-	text-align: center;
-	width: 91%;
-	border: solid;
-}
-
-td, th {
-	width:13%
 }
