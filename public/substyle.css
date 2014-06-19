@@ -13,3 +13,18 @@ text-shadow: 0px 0px 10px white;
 font-size: large;
 }
 
+a:link, a:visited {
+	text-decoration: none;
+	color: black;
+	}
+
+a:hover {
+	text-shadow: 0px 0px 10px white;;
+	color: black;
+	}
+
+a:active {
+	text-shadow: 0px 0px 10px white;;
+	color: gray;
+	}
+
