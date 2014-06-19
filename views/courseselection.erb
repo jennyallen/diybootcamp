@@ -18,7 +18,7 @@
 			<th>Select Course</th>
 		</tr>
 		
-		<% courses = Scraper.coursearray %>
+		<% courses = Scraper.courses %>
 		<form action = "/scheduler/yournewschedule" method="post">
 		<% courses.each_with_index do |course, i| %>
 		<tbody>

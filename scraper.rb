@@ -5,6 +5,8 @@ class Scraper
 	def self.courses_to_hasharray
 	# Get a Nokogiri::HTML:Document for the page we’re interested in...
 
+		@@courses = File.read("./all_courses")
+
 		doc = Nokogiri::HTML(open('http://oyc.yale.edu/courses'))
 		courses = []
 
@@ -53,4 +55,9 @@ class Scraper
 	#later, make droppable by starting part way in...
 
 	#make a :my_courses array of indexes on post
+
+	def self.update
+		File.open('all_courses', 'w') {|file| file.write(self.update)}
+		@@courses = File.read("./all_courses")
+	end
 end
