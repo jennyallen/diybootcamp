@@ -48,3 +48,10 @@ end
 def coursearray
 	return get_sessions(courses_to_hasharray)
 end
+
+#have a :changed bool value in the session that says whether the schedule needs to be updated. 
+#Change when you post from either shed or avail
+#Then, re run algo/schedule function...
+#later, make droppable by starting part way in...
+
+#make a :my_courses array of indexes on post
