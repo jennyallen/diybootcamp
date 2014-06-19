@@ -5,6 +5,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'pry'
 
+require_relative 'practice_hash'
 require_relative 'scraper'
 
 enable :sessions
@@ -100,10 +101,19 @@ def timeToNum(timestr)
 	if timestr == nil || timestr == ''
 		timenum = 0
 	else
-		timenum = timestr[0].to_i
-		if timestr.include?('pm')
-			timenum += 12
+		timearr = timestr.split(':')
+		timenum = timearr[0].to_i
+
+		if timestr.include?('PM')
+			if timenum != 12
+				timenum += 12
+			end
 		end
+
+		if timenum == 12 && timestr.include?('AM')
+			timenum = 0
+		end
+
 	end
 
 	timenum
@@ -116,6 +126,12 @@ def createDayArray(starttime, endtime)
 	end
 
 	return hoursInDay
+end
+
+
+
+def oneWeekSchedule
+
 end
 
 
@@ -139,11 +155,15 @@ post '/scheduler/yournewschedule' do
 	daysOfWeek.each do |day, hash|
 		starttime = timeToNum(params[day+"-starttime"])
 		endtime = timeToNum(params[day+"-endtime"])
+		puts "Starttime" + params[day+"-starttime"] + " Parsed Input: " + starttime.to_s
+		puts "EndTime" + params[day+"-endtime"] + " Parsed Input: " + endtime.to_s
 		hash[:availableHours] = createDayArray(starttime, endtime)
 		hash[:totalHours] = endtime - starttime
 	end
 
-	puts daysOfWeek
+
+
+	File.open('availability_hash', 'w') {|file| file.write(daysOfWeek.to_s)}
 
 
 
