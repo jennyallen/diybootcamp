@@ -24,7 +24,7 @@ require 'sinatra/reloader'
 
 # cal_string = cal.to_ical
 
-File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }
+# File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }
 
 def convert_to_time (number)
 	if number >= 12
