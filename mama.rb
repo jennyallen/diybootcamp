@@ -107,7 +107,11 @@ post '/scheduler/yournewschedule' do
 end
 
 get '/courses' do
-	erb :courseselection, locals: {session: session}
+	if session[:availiable_hours] == nil
+		erb :no_courseselection
+	else
+		erb :courseselection, locals: {session: session}
+	end
 end
 
 # post '/courses' do

@@ -9,17 +9,19 @@
 
 <body>
 	<table class="pure-table">
-		<tr>
-			<th></th>
+<!-- 		<tr>
+			<th>Title</th>
 			<th>Course Number</th>
-			<th>Course link</th>
-		</tr>
+			<th>Course Time</th>
+		</tr> -->
 		<% courses = Scraper.coursearray %>
 		<% courses.each do |course| %>
 		<tr>
-			<td><%= course[:title] %></td>
 			<td><%= course[:number] %></td>
-			<td><%= course[:link] %></td>
+			<% full_link = 'http://oyc.yale.edu' + course[:link] %>
+			<td><a href=<%= full_link %> target='_blank'><%= course[:title] %></a></td>
+			<td><%= course[:professor] %></td>
+			<td>~<%= course[:time] %> Hours</td>
 		</tr>
 		<% end %>
 	</table>
