@@ -1,7 +1,14 @@
 require 'icalendar'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'nokogiri'
+require 'open-uri'
+require 'pry'
 
+require_relative 'scraper'
+
+enable :sessions
+enable :method_override
 
 cal = Icalendar::Calendar.new
 
@@ -148,6 +155,18 @@ post '/scheduler/yournewschedule' do
 
 end
 
+get '/courses' do
+	if session[:availiable_hours] == nil
+		erb :no_courseselection
+	else
+		erb :courseselection, locals: {session: session}
+	end
+end
+
+# post '/courses' do
+# 	session[:changed]=true
+
+# end
 
 
 

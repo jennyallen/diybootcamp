@@ -1,20 +1,39 @@
 <html>
 <head>
 	<title>Select Courses</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+	<link href="substyle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<table>
-		<tr>
-			<th>Course Title</th>
+	<table class="pure-table">
+<!-- 		<tr>
+			<th>Title</th>
 			<th>Course Number</th>
-			<th>Course link</th>
-		</tr>
-		<% session[:courses].each do |course| %>
+			<th>Course Time</th>
+		</tr> -->
+		<% courses = Scraper.coursearray %>
+		<% courses.each do |course| %>
 		<tr>
+			<thead>
+			<tr>
+				<th></th>
+				<th>Course Number</th>
+				<th>Course link</th>
+			</tr>
+			</thead>
+		<% courses = Scraper.coursearray %>
+		<% courses.each do |course| %>
+		<tbody>
+        <tr class="pure-table-striped">
 			<td><%= course[:title] %></td>
 			<td><%= course[:number] %></td>
-			<td><%= course[:link] %></td>
+			<% full_link = 'http://oyc.yale.edu' + course[:link] %>
+			<td><a href=<%= full_link %> target='_blank'><%= course[:title] %></a></td>
+			<td><%= course[:professor] %></td>
+			<td>~<%= course[:time] %> Hours</td>
 		</tr>
 		<% end %>
 	</table>
