@@ -10,7 +10,6 @@
 <body>
 	<table class="pure-table">
 		<tr>
-			<th>Title</th>
 			<th>Course Number</th>
 			<th>Link</th>
 			<th>Professor</th>
@@ -18,22 +17,22 @@
 			<th>Select Course</th>
 		</tr>
 		
-		<% courses = Scraper.courses %>
-		<form action = "/scheduler/yournewschedule" method="post">
+		<% courses = Scraper.coursearray %>
+		<form action = "/courses" method="post">
+
 		<% courses.each_with_index do |course, i| %>
 		<tbody>
         <tr class="pure-table-striped"> 
-			<td><%= course[:title] %></td>
 			<td><%= course[:number] %></td>
 			<% full_link = 'http://oyc.yale.edu' + course[:link] %>
 			<td><a href=<%= full_link %> target='_blank'><%= course[:title] %></a></td>
 			<td><%= course[:professor] %></td>
 			<td>~<%= course[:time] %> Hours</td>
-			<td><input type="checkbox" value=<%=i%>/>
+			<td><input name="item[]" type="checkbox" value="<%=i%>"/>
 		</tr>
 		<% end %>
 	</table>
-	<input class="pure-button" type="input" value="Select">
+	<input class="pure-button" type="submit" value="Select">
 </form>
 </body>
 </html>
