@@ -82,7 +82,12 @@ end
 get '/courses' do
 	session[:courses] ||= coursearray
 
-	erb :courseselection
+	erb :courseselection, locals: {session: session}
+end
+
+post '/courses' do
+	session[:changed]=true
+
 end
 
 
