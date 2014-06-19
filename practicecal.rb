@@ -85,10 +85,10 @@ get '/courses' do
 	erb :courseselection, locals: {session: session}
 end
 
-post '/courses' do
-	session[:changed]=true
+# post '/courses' do
+# 	session[:changed]=true
 
-end
+# end
 
 
 
