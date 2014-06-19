@@ -1,0 +1,18 @@
+body
+{
+
+background-repeat: no-repeat;
+background-size: 100%;
+background-color: white;
+background
+font-family: "Oswald";
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+
+text-shadow: 0px 0px 10px black; 
+color: white; 
+font-size: large;
+}
+

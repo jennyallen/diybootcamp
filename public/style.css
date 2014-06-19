@@ -31,6 +31,7 @@ a:active {
 	background-color: #7F0000 ;
 	font-family: "Oswald";
 	color: black;
+	opacity: 0.9;
 }
 
 
@@ -38,20 +39,24 @@ a:active {
 	background-color: #FF0000;
 	font-family: "Oswald";
 	color: black;
+	opacity: 0.9;
 }
 
 #schedule{
 	background-color: #7F2626;
 	font-family: "Oswald";
 	color: black;
+	opacity: 0.9;
 }
 
 #about{
 	background-color: #FF3D30;
 	font-family: "Oswald";
 	color: black;
+	opacity: 0.9;
 }
+
 #container{
-	min-height: 50%;
+	min-height: 60%;
 }
 
