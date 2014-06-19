@@ -2,10 +2,11 @@ require 'nokogiri'
 require 'open-uri'
 
 class Scraper
+
+	@@courses = File.read("./all_courses")
+
 	def self.courses_to_hasharray
 	# Get a Nokogiri::HTML:Document for the page we’re interested in...
-
-		@@courses = File.read("./all_courses")
 
 		doc = Nokogiri::HTML(open('http://oyc.yale.edu/courses'))
 		courses = []
@@ -59,5 +60,9 @@ class Scraper
 	def self.update
 		File.open('all_courses', 'w') {|file| file.write(self.update)}
 		@@courses = File.read("./all_courses")
+	end
+
+	def self.courses
+		@@courses
 	end
 end
