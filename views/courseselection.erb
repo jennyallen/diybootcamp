@@ -14,7 +14,14 @@
 			<th>Course Number</th>
 			<th>Course link</th>
 		</tr>
-		
+		<% courses = Scraper.coursearray %>
+		<% courses.each do |course| %>
+		<tr>
+			<td><%= course[:title] %></td>
+			<td><%= course[:number] %></td>
+			<td><%= course[:link] %></td>
+		</tr>
+		<% end %>
 	</table>
 </body>
 </html>
