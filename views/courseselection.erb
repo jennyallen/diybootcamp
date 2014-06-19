@@ -10,7 +10,8 @@
 			<th>Course Number</th>
 			<th>Course link</th>
 		</tr>
-		<% session[:courses].each do |course| %>
+		<% courses = Scraper.coursearray %>
+		<% courses.each do |course| %>
 		<tr>
 			<td><%= course[:title] %></td>
 			<td><%= course[:number] %></td>

@@ -1,8 +1,14 @@
 require 'icalendar'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'nokogiri'
+require 'open-uri'
+require 'pry'
+
+require_relative 'scraper'
 
 enable :sessions
+enable :method_override
 
 # cal = Icalendar::Calendar.new
 
@@ -101,8 +107,6 @@ post '/scheduler/yournewschedule' do
 end
 
 get '/courses' do
-	session[:courses] ||= coursearray
-
 	erb :courseselection, locals: {session: session}
 end
 
