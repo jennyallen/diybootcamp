@@ -17,6 +17,18 @@
 		<% courses = Scraper.coursearray %>
 		<% courses.each do |course| %>
 		<tr>
+			<thead>
+			<tr>
+				<th></th>
+				<th>Course Number</th>
+				<th>Course link</th>
+			</tr>
+			</thead>
+		<% courses = Scraper.coursearray %>
+		<% courses.each do |course| %>
+		<tbody>
+        <tr class="pure-table-striped">
+			<td><%= course[:title] %></td>
 			<td><%= course[:number] %></td>
 			<% full_link = 'http://oyc.yale.edu' + course[:link] %>
 			<td><a href=<%= full_link %> target='_blank'><%= course[:title] %></a></td>
