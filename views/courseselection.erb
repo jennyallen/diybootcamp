@@ -4,6 +4,19 @@
 </head>
 
 <body>
-
+	<table>
+		<tr>
+			<th>Course Title</th>
+			<th>Course Number</th>
+			<th>Course link</th>
+		</tr>
+		<% session[:courses].each do |course| %>
+		<tr>
+			<td><%= course[:title] %></td>
+			<td><%= course[:number] %></td>
+			<td><%= course[:link] %></td>
+		</tr>
+		<% end %>
+	</table>
 </body>
 </html>

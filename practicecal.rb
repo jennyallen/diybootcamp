@@ -1,5 +1,9 @@
 require 'icalendar'
 require 'sinatra'
+require_relative './scraper.rb'
+
+enable :sessions
+
 cal = Icalendar::Calendar.new
 
 event = cal.event do |e|
@@ -75,7 +79,16 @@ post '/scheduler/yournewschedule' do
 
 end
 
+get '/courses' do
+	session[:courses] ||= coursearray
 
+	erb :courseselection, locals: {session: session}
+end
+
+post '/courses' do
+	session[:changed]=true
+
+end
 
 
 
