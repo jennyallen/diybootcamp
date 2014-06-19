@@ -155,20 +155,24 @@ post '/scheduler/yournewschedule' do
 
 end
 
-get '/courses' do
-	if session[:availiable_hours] == nil
-		erb :no_courseselection
-	else
-		erb :courseselection, locals: {session: session}
-	end
-end
-
-# post '/courses' do
-# 	session[:changed]=true
-
+# get '/courses' do
+# 	if session[:availiable_hours] == nil
+# 		erb :no_courseselection
+# 	else
+# 		erb :courseselection, locals: {session: session}
+# 	end
 # end
 
+post '/courses' do
+	session['selectedcourses'] ||= {}
+	session['selectedcourses'] = params[:item]
+	allthecoursepicked = []
 
+	session['selectedcourses'].each do |course|
+		allthecoursepicked.push()
+	end
+
+end
 
 
 
