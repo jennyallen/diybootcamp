@@ -50,7 +50,7 @@ class DayAvailability
 	attr_accessor :totalHours
 end
 
-class we
+class WeekAvailability
 	def initialize
 		@Monday = []
 		@Tuesday = []
@@ -154,7 +154,6 @@ class TotalSchedule
 
 	attr_accessor :totalAvailabilityArray
 	attr_accessor :totalHours
-	attr_accessor :courseArray
 
 	def createAvailabilityArray(oneWeekSchedule)
 			@totalAvailabilityArray = []
@@ -208,7 +207,7 @@ class TotalSchedule
 			course.dayOffset = @totalAvailabilityArray[index][1]
 		end
 
-		@courseArray
+		@courseArray 
 	end
 
 # 		[10, 2], {:title=>"Financial Markets (2008)", :lectureinfo=>{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}}]

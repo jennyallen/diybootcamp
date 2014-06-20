@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>You're Available at these Times</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+	<link href="substyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-repeat: no-repeat; background-size: 100%; background-color: white; font-family: 'Oswald'; background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.6); color: #7F0000; text-shadow: 0px 0px 10px white;">
+
+<h1>Thanks for choosing your availability, my child.<h1>
+
+
+	<% if session['pickedcourses'] == true %>
+	Go on to look at Mama's Schedule.
+	<% else %>
+	Please pick your courses now.
+	<% end %>
+
+</body>
+	
+</html>

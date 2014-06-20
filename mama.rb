@@ -4,6 +4,8 @@ require 'sinatra/reloader'
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
+require './all_courses.rb'
+require './emailer.rb'
 
 require_relative 'practice_hash'
 require_relative 'scraper'
@@ -58,11 +60,15 @@ def convert_to_time (number)
 end
 
 get '/' do
+		session['pickedcourses'] = false
+		session['pickedschedule'] = false
 	erb :index
 end
 
 get '/courses' do
-	erb :courseselection
+	courses = stored_courses
+
+	erb :courseselection, locals: {courses: courses}
 end
 
 get '/scheduler' do
@@ -138,6 +144,8 @@ end
 
 post '/scheduler/yournewschedule' do 
 
+	session['pickedschedule'] = true
+
 	daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 	hoursInWeek = Array.new(168)
@@ -192,7 +200,7 @@ post '/scheduler/yournewschedule' do
 	# starttime = timeToNum(starttime)
 	# endtime = timeToNum(endtime)
 
-	erb :userschedule
+	erb :availabilitysuccess
 
 end
 
@@ -205,14 +213,19 @@ end
 # end
 
 post '/courses' do
+	session['pickedcourses'] = true
 	session['selectedcourses'] ||= {}
 	session['selectedcourses'] = params[:item]
-	allthecoursepicked = []
+	courses = []
 
-	session['selectedcourses'].each do |course|
-		allthecoursepicked.push()
+	if params[:item] == nil
+		erb :no_courseselection
+	else
+		session['selectedcourses'].each do |course|
+			courses.push(stored_courses[course.to_i])
+		end
+		erb :coursesuccess, locals: {courses: courses, session: session}
 	end
-
 end
 
 
