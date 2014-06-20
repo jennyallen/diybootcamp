@@ -149,26 +149,27 @@ class TotalSchedule
 	def initialize(totalHours, hoursPerWeek)
 		@totalHours = totalHours
 		@hoursPerWeek = hoursPerWeek
+		@totalAvailabilityArray = []
+		@courseArray = []
 		# @availarr = []
 	end
 
-	attr_accessor :totalAvailabilityArray
-	attr_accessor :totalHours
+
 
 	def createAvailabilityArray(oneWeekSchedule)
 			@totalAvailabilityArray = []
 			localTotalHours = @totalHours
 			weeks=(localTotalHours+@hoursPerWeek-1)/@hoursPerWeek #ceiling, round up weeks
 			(0...weeks).each do |week|
-				oneWeekSchedule.each do |session|
+				oneWeekSchedule.each do |period|
 					#schedule the right amount of hours
 					if localTotalHours <= 0
 						break
 					end
 
-					puts localTotalHours
+					@totalAvailabilityArray.push([period[0], period[1]+7*week])
 
-					@totalAvailabilityArray.push([session[0], session[1]+7*week])
+					# puts localTotalHours.to_ss
 
 					localTotalHours -= 1
 				end
@@ -200,7 +201,7 @@ class TotalSchedule
 		@courseArray
 	end
 
-	def createScheduleArr(practicehash)
+	def createScheduleArray(practicehash)
 
 		@courseArray.each_with_index do |course, index|
 			course.hourOffset = @totalAvailabilityArray[index][0]
@@ -209,6 +210,10 @@ class TotalSchedule
 
 		@courseArray 
 	end
+
+	attr_accessor :totalAvailabilityArray
+	attr_accessor :totalHours
+	attr_accessor :courseArray
 
 # 		[10, 2], {:title=>"Financial Markets (2008)", :lectureinfo=>{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}}]
 
