@@ -6,6 +6,7 @@ require 'open-uri'
 require 'pry'
 require './all_courses.rb'
 require './emailer.rb'
+require './events.rb'
 
 require_relative 'practice_hash'
 require_relative 'scraper'

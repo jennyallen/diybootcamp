@@ -58,8 +58,10 @@ class Scraper
 	#make a :my_courses array of indexes on post
 
 	def self.update
-		File.open('all_courses', 'w') {|file| file.write(self.update)}
+		File.open('all_courses', 'w') {|file| file.write(self.coursearray)}
 		@@courses = File.open("all_courses", "rb") {|io| io.read}
+		puts @@courses
+		puts @@courses.class
 	end
 
 	def self.courses
