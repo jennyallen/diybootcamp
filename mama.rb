@@ -61,6 +61,8 @@ def convert_to_time (number)
 end
 
 get '/' do
+		session['pickedcourses'] = false
+		session['pickedschedule'] = false
 	erb :index
 end
 
@@ -143,6 +145,8 @@ end
 
 post '/scheduler/yournewschedule' do 
 
+	session['pickedschedule'] = true
+
 	daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 	hoursInWeek = Array.new(168)
@@ -155,28 +159,73 @@ post '/scheduler/yournewschedule' do
 		startdate = dateConverter(params['startdate'])
 	end
 
-	daysOfWeek = {"Sunday"=>{}, "Monday"=>{}, "Tuesday"=>{}, "Wednesday"=>{}, "Thursday"=>{}, "Friday"=>{}, "Saturday"=>{}}
+	daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-	daysOfWeek.each do |day, hash|
+	# daysOfWeek.each do |day, hash|
+	# 	starttime = timeToNum(params[day+"-starttime"])
+	# 	endtime = timeToNum(params[day+"-endtime"])
+	# 	puts "Starttime" + params[day+"-starttime"] + " Parsed Input: " + starttime.to_s
+	# 	puts "EndTime" + params[day+"-endtime"] + " Parsed Input: " + endtime.to_s
+	# 	hash[:availableHours] = createDayArray(starttime, endtime)
+	# 	hash[:totalHours] = endtime - starttime
+	# end
+
+	#Figures out the slots of time that are available each week
+	weekavail = WeekAvailability.new
+
+	daysOfWeek.each do |day|
 		starttime = timeToNum(params[day+"-starttime"])
-		endtime = timeToNum(params[day+"-endtime"])
-		puts "Starttime" + params[day+"-starttime"] + " Parsed Input: " + starttime.to_s
-		puts "EndTime" + params[day+"-endtime"] + " Parsed Input: " + endtime.to_s
-		hash[:availableHours] = createDayArray(starttime, endtime)
-		hash[:totalHours] = endtime - starttime
+	 	endtime = timeToNum(params[day+"-endtime"])
+	 	#Find slots of time that are available each day
+	 	case day 
+		  	when "Monday"
+		 		weekavail.Monday = DayAvailability.new(day, createDayArray(starttime, endtime), endtime-starttime)
+			when "Tuesday"
+				weekavail.Tuesday = DayAvailability.new(day, createDayArray(starttime, endtime), endtime-starttime)
+			when "Wednesday"
+				weekavail.Wednesday= DayAvailability.new(day, createDayArray(starttime, endtime), endtime-starttime)
+			when "Thursday"
+				weekavail.Thursday = DayAvailability.new(day, createDayArray(starttime, endtime), endtime-starttime)
+			when "Friday"
+				weekavail.Friday = DayAvailability.new(day, createDayArray(starttime, endtime), endtime-starttime)
+			when "Saturday"
+				weekavail.Saturday = DayAvailability.new(day, createDayArray(starttime, endtime), endtime-starttime)
+			when "Sunday"
+				weekavail.Sunday = DayAvailability.new(day, createDayArray(starttime, endtime), endtime-starttime)
+		end
+
 	end
 
 
+	#hours Per Week that you are willing to work
+	hoursperweek = params['hoursPerWeek'].to_i
 
-	File.open('availability_hash', 'w') {|file| file.write(daysOfWeek.to_s)}
+	weeksched = WeekSchedule.new(startdate, weekavail.weekArray, hoursperweek.to_i)
 
 
+	#create a schedule of weekly availability
+	weeklysched = weeksched.createSchedule
+	puts weeklysched
 
+	#create total schedule 
+	totalsched = TotalSchedule.new(58, hoursperweek.to_i)
+
+	h = {:professor=>"Shiller, Robert J.", :number=>"ECON 252", :link=>"/economics/econ-252-08", :department=>"Economics", :department_link=>"/economics", :title=>"Financial Markets (2008)", :sessions=>[{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}, {:title=>"The Universal Principle of Risk Management: Pooling and the Hedging of Risks", :link=>"/economics/econ-252-08/lecture-2"}, {:title=>"Technology and Invention in Finance", :link=>"/economics/econ-252-08/lecture-3"}, {:title=>"Portfolio Diversification and Supporting Financial Institutions (CAPM Model)", :link=>"/economics/econ-252-08/lecture-4"}, {:title=>"Insurance: The Archetypal Risk Management Institution", :link=>"/economics/econ-252-08/lecture-5"}, {:title=>"Efficient Markets vs. Excess Volatility", :link=>"/economics/econ-252-08/lecture-6"}, {:title=>"Behavioral Finance: The Role of Psychology", :link=>"/economics/econ-252-08/lecture-7"}, {:title=>"Human Foibles, Fraud, Manipulation, and Regulation", :link=>"/economics/econ-252-08/lecture-8"}, {:title=>"Guest Lecture by David Swensen", :link=>"/economics/econ-252-08/lecture-9"}, {:title=>"Debt Markets: Term Structure", :link=>"/economics/econ-252-08/lecture-10"}, {:title=>"Midterm Exam 1", :link=>"/economics/econ-252-08/exam-1"}, {:title=>"Stocks", :link=>"/economics/econ-252-08/lecture-11"}, {:title=>"Real Estate Finance and Its Vulnerability to Crisis", :link=>"/economics/econ-252-08/lecture-12"}, {:title=>"Banking: Successes and Failures", :link=>"/economics/econ-252-08/lecture-13"}, {:title=>"Guest Lecture by Andrew Redleaf", :link=>"/economics/econ-252-08/lecture-14"}, {:title=>"Guest Lecture by Carl Icahn", :link=>"/economics/econ-252-08/lecture-15"}, {:title=>"The Evolution and Perfection of Monetary Policy", :link=>"/economics/econ-252-08/lecture-16"}, {:title=>"Midterm Exam 2", :link=>"/economics/econ-252-08/exam-2"}, {:title=>"Investment Banking and Secondary Markets", :link=>"/economics/econ-252-08/lecture-17"}, {:title=>"Professional Money Managers and Their Influence", :link=>"/economics/econ-252-08/lecture-18"}, {:title=>"Brokerage, ECNs, etc.", :link=>"/economics/econ-252-08/lecture-19"}, {:title=>"Guest Lecture by Stephen Schwarzman", :link=>"/economics/econ-252-08/lecture-20"}, {:title=>"Forwards and Futures", :link=>"/economics/econ-252-08/lecture-21"}, {:title=>"Stock Index, Oil and Other Futures Markets", :link=>"/economics/econ-252-08/lecture-22"}, {:title=>"Options Markets", :link=>"/economics/econ-252-08/lecture-23"}, {:title=>"Making It Work for Real People: The Democratization of Finance", :link=>"/economics/econ-252-08/lecture-24"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part I (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-25"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part II (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-26"}, {:title=>"Final Exam", :link=>"/economics/econ-252-08/exam-3"}], :time=>58}
+
+	# totalsched.createAvailabilityArray(h)
+	# totalsched.createCourseArray(h)
+	totalsched.createAvailabilityArray(weeklysched)
+	totalsched.createCourseArray(h)
+	coursearr = totalsched.createScheduleArray(h)
+
+
+	puts totalsched.to_s
+	puts coursearr.to_s
 
 	# starttime = timeToNum(starttime)
 	# endtime = timeToNum(endtime)
 
-	erb :userschedule
+	erb :availabilitysuccess
 
 end
 
@@ -189,14 +238,19 @@ end
 # end
 
 post '/courses' do
+	session['pickedcourses'] = true
 	session['selectedcourses'] ||= {}
 	session['selectedcourses'] = params[:item]
-	allthecoursepicked = []
+	courses = []
 
-	session['selectedcourses'].each do |course|
-		allthecoursepicked.push(stored_courses[course])
+	if params[:item] == nil
+		erb :no_courseselection
+	else
+		session['selectedcourses'].each do |course|
+			courses.push(stored_courses[course.to_i])
+		end
+		erb :coursesuccess, locals: {courses: courses, session: session}
 	end
-
 end
 
 
