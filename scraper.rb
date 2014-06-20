@@ -3,7 +3,7 @@ require 'open-uri'
 
 class Scraper
 
-	@@courses = File.read("./all_courses")
+	@@courses = File.open("all_courses", "rb") {|io| io.read}
 
 	def self.courses_to_hasharray
 	# Get a Nokogiri::HTML:Document for the page we’re interested in...
@@ -59,7 +59,7 @@ class Scraper
 
 	def self.update
 		File.open('all_courses', 'w') {|file| file.write(self.update)}
-		@@courses = File.read("./all_courses")
+		@@courses = File.open("all_courses", "rb") {|io| io.read}
 	end
 
 	def self.courses

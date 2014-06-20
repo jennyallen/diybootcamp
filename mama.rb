@@ -4,6 +4,7 @@ require 'sinatra/reloader'
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
+require './all_courses.rb'
 
 require_relative 'practice_hash'
 require_relative 'scraper'
@@ -62,7 +63,9 @@ get '/' do
 end
 
 get '/courses' do
-	erb :courseselection
+	courses = stored_courses
+
+	erb :courseselection, locals: {courses: courses}
 end
 
 get '/scheduler' do
