@@ -189,7 +189,7 @@ post '/courses' do
 	allthecoursepicked = []
 
 	session['selectedcourses'].each do |course|
-		allthecoursepicked.push()
+		allthecoursepicked.push(stored_courses[course])
 	end
 
 end
