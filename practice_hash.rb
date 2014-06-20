@@ -35,7 +35,7 @@ class StudyHall
 	attr_accessor :dayOffset
 end
 
-$practicehash = {:professor=>"Shiller, Robert J.", :number=>"ECON 252", :link=>"/economics/econ-252-08", :department=>"Economics", :department_link=>"/economics", :title=>"Financial Markets (2008)", :sessions=>[{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}, {:title=>"The Universal Principle of Risk Management: Pooling and the Hedging of Risks", :link=>"/economics/econ-252-08/lecture-2"}, {:title=>"Technology and Invention in Finance", :link=>"/economics/econ-252-08/lecture-3"}, {:title=>"Portfolio Diversification and Supporting Financial Institutions (CAPM Model)", :link=>"/economics/econ-252-08/lecture-4"}, {:title=>"Insurance: The Archetypal Risk Management Institution", :link=>"/economics/econ-252-08/lecture-5"}, {:title=>"Efficient Markets vs. Excess Volatility", :link=>"/economics/econ-252-08/lecture-6"}, {:title=>"Behavioral Finance: The Role of Psychology", :link=>"/economics/econ-252-08/lecture-7"}, {:title=>"Human Foibles, Fraud, Manipulation, and Regulation", :link=>"/economics/econ-252-08/lecture-8"}, {:title=>"Guest Lecture by David Swensen", :link=>"/economics/econ-252-08/lecture-9"}, {:title=>"Debt Markets: Term Structure", :link=>"/economics/econ-252-08/lecture-10"}, {:title=>"Midterm Exam 1", :link=>"/economics/econ-252-08/exam-1"}, {:title=>"Stocks", :link=>"/economics/econ-252-08/lecture-11"}, {:title=>"Real Estate Finance and Its Vulnerability to Crisis", :link=>"/economics/econ-252-08/lecture-12"}, {:title=>"Banking: Successes and Failures", :link=>"/economics/econ-252-08/lecture-13"}, {:title=>"Guest Lecture by Andrew Redleaf", :link=>"/economics/econ-252-08/lecture-14"}, {:title=>"Guest Lecture by Carl Icahn", :link=>"/economics/econ-252-08/lecture-15"}, {:title=>"The Evolution and Perfection of Monetary Policy", :link=>"/economics/econ-252-08/lecture-16"}, {:title=>"Midterm Exam 2", :link=>"/economics/econ-252-08/exam-2"}, {:title=>"Investment Banking and Secondary Markets", :link=>"/economics/econ-252-08/lecture-17"}, {:title=>"Professional Money Managers and Their Influence", :link=>"/economics/econ-252-08/lecture-18"}, {:title=>"Brokerage, ECNs, etc.", :link=>"/economics/econ-252-08/lecture-19"}, {:title=>"Guest Lecture by Stephen Schwarzman", :link=>"/economics/econ-252-08/lecture-20"}, {:title=>"Forwards and Futures", :link=>"/economics/econ-252-08/lecture-21"}, {:title=>"Stock Index, Oil and Other Futures Markets", :link=>"/economics/econ-252-08/lecture-22"}, {:title=>"Options Markets", :link=>"/economics/econ-252-08/lecture-23"}, {:title=>"Making It Work for Real People: The Democratization of Finance", :link=>"/economics/econ-252-08/lecture-24"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part I (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-25"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part II (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-26"}, {:title=>"Final Exam", :link=>"/economics/econ-252-08/exam-3"}], :time=>58}
+$practicehash = [{:professor=>"Saltzman, W. Mark", :number=>"BENG 100", :link=>"/biomedical-engineering/beng-100", :department=>"Biomedical Engineering", :department_link=>"/biomedical-engineering", :title=>"Frontiers of Biomedical Engineering", :sessions=>[{:title=>"What Is Biomedical Engineering?", :link=>"/biomedical-engineering/beng-100/lecture-1"}, {:title=>"What Is Biomedical Engineering? (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-2"}, {:title=>"Genetic Engineering", :link=>"/biomedical-engineering/beng-100/lecture-3"}, {:title=>"Genetic Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-4"}, {:title=>"Cell Culture Engineering", :link=>"/biomedical-engineering/beng-100/lecture-5"}, {:title=>"Cell Culture Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-6"}, {:title=>"Cell Communication and Immunology", :link=>"/biomedical-engineering/beng-100/lecture-7"}, {:title=>"Cell Communication and Immunology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-8"}, {:title=>"Biomolecular Engineering: Engineering of Immunity", :link=>"/biomedical-engineering/beng-100/lecture-9"}, {:title=>"Biomolecular Engineering: Engineering of Immunity (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-10"}, {:title=>"Biomolecular Engineering: General Concepts", :link=>"/biomedical-engineering/beng-100/lecture-11"}, {:title=>"Biomolecular Engineering: General Concepts (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-12"}, {:title=>"Cardiovascular Physiology", :link=>"/biomedical-engineering/beng-100/lecture-13"}, {:title=>"Cardiovascular Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-14"}, {:title=>"Cardiovascular Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-15"}, {:title=>"Midterm Exam", :link=>"/biomedical-engineering/beng-100/exam-1"}, {:title=>"Renal Physiology", :link=>"/biomedical-engineering/beng-100/lecture-16"}, {:title=>"Renal Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-17"}, {:title=>"Biomechanics and Orthopedics", :link=>"/biomedical-engineering/beng-100/lecture-18"}, {:title=>"Biomechanics and Orthopedics (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-19"}, {:title=>"Bioimaging", :link=>"/biomedical-engineering/beng-100/lecture-20"}, {:title=>"Bioimaging (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-21"}, {:title=>"Tissue Engineering", :link=>"/biomedical-engineering/beng-100/lecture-22"}, {:title=>"Tissue Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-23"}, {:title=>"Biomedical Engineers and Cancer", :link=>"/biomedical-engineering/beng-100/lecture-24"}, {:title=>"Biomedical Engineers and Artificial Organs", :link=>"/biomedical-engineering/beng-100/lecture-25"}, {:title=>"Final Exam", :link=>"/biomedical-engineering/beng-100/exam-2"}], :time=>54}{:professor=>"Shiller, Robert J.", :number=>"ECON 252", :link=>"/economics/econ-252-08", :department=>"Economics", :department_link=>"/economics", :title=>"Financial Markets (2008)", :sessions=>[{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}, {:title=>"The Universal Principle of Risk Management: Pooling and the Hedging of Risks", :link=>"/economics/econ-252-08/lecture-2"}, {:title=>"Technology and Invention in Finance", :link=>"/economics/econ-252-08/lecture-3"}, {:title=>"Portfolio Diversification and Supporting Financial Institutions (CAPM Model)", :link=>"/economics/econ-252-08/lecture-4"}, {:title=>"Insurance: The Archetypal Risk Management Institution", :link=>"/economics/econ-252-08/lecture-5"}, {:title=>"Efficient Markets vs. Excess Volatility", :link=>"/economics/econ-252-08/lecture-6"}, {:title=>"Behavioral Finance: The Role of Psychology", :link=>"/economics/econ-252-08/lecture-7"}, {:title=>"Human Foibles, Fraud, Manipulation, and Regulation", :link=>"/economics/econ-252-08/lecture-8"}, {:title=>"Guest Lecture by David Swensen", :link=>"/economics/econ-252-08/lecture-9"}, {:title=>"Debt Markets: Term Structure", :link=>"/economics/econ-252-08/lecture-10"}, {:title=>"Midterm Exam 1", :link=>"/economics/econ-252-08/exam-1"}, {:title=>"Stocks", :link=>"/economics/econ-252-08/lecture-11"}, {:title=>"Real Estate Finance and Its Vulnerability to Crisis", :link=>"/economics/econ-252-08/lecture-12"}, {:title=>"Banking: Successes and Failures", :link=>"/economics/econ-252-08/lecture-13"}, {:title=>"Guest Lecture by Andrew Redleaf", :link=>"/economics/econ-252-08/lecture-14"}, {:title=>"Guest Lecture by Carl Icahn", :link=>"/economics/econ-252-08/lecture-15"}, {:title=>"The Evolution and Perfection of Monetary Policy", :link=>"/economics/econ-252-08/lecture-16"}, {:title=>"Midterm Exam 2", :link=>"/economics/econ-252-08/exam-2"}, {:title=>"Investment Banking and Secondary Markets", :link=>"/economics/econ-252-08/lecture-17"}, {:title=>"Professional Money Managers and Their Influence", :link=>"/economics/econ-252-08/lecture-18"}, {:title=>"Brokerage, ECNs, etc.", :link=>"/economics/econ-252-08/lecture-19"}, {:title=>"Guest Lecture by Stephen Schwarzman", :link=>"/economics/econ-252-08/lecture-20"}, {:title=>"Forwards and Futures", :link=>"/economics/econ-252-08/lecture-21"}, {:title=>"Stock Index, Oil and Other Futures Markets", :link=>"/economics/econ-252-08/lecture-22"}, {:title=>"Options Markets", :link=>"/economics/econ-252-08/lecture-23"}, {:title=>"Making It Work for Real People: The Democratization of Finance", :link=>"/economics/econ-252-08/lecture-24"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part I (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-25"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part II (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-26"}, {:title=>"Final Exam", :link=>"/economics/econ-252-08/exam-3"}], :time=>58}, ]
 
 
 class DayAvailability
@@ -92,32 +92,6 @@ class WeekSchedule
 		@hoursPerWeek = hoursPerWeek
 	end
 
-
-
-		# availability_hash = {"Sunday"=>{:availableHours=>[false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false], :totalHours=>2}, "Monday"=>{:availableHours=>[false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false], :totalHours=>2}, "Tuesday"=>{:availableHours=>[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, false, false, false, false], :totalHours=>3}, "Wednesday"=>{:availableHours=>[false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false], :totalHours=>1}, "Thursday"=>{:availableHours=>[false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false], :totalHours=>2}, "Friday"=>{:availableHours=>[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false], :totalHours=>0}, "Saturday"=>{:availableHours=>[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false], :totalHours=>0}}
-
-		# # puts availability_hash
-
-		# availability_array = []
-
-		# availability_hash.each do |key, value|
-		# 	case key
-		# 		when "Sunday"
-		# 			availability_array[0] = value[:availableHours]
-		# 		when "Monday"
-		# 			availability_array[1] = value[:availableHours]
-		# 		when "Tuesday"
-		# 			availability_array[2] = value[:availableHours]
-		# 		when "Wednesday"
-		# 			availability_array[3] = value[:availableHours]
-		# 		when "Thursday"
-		# 			availability_array[4] = value[:availableHours]
-		# 		when "Friday"
-		# 			availability_array[5] = value[:availableHours]
-		# 		when "Saturday"
-		# 			availability_array[6] = value[:availableHours]
-		# 	end
-		# end
 	def createSchedule
 		hoursLocal = @hoursPerWeek
 
@@ -177,6 +151,29 @@ class TotalSchedule
 		@totalAvailabilityArray
 	end
 
+	#course array no study halls
+	def createCourseArrayNoSH(coursearr, courseindices)
+		
+
+		numCourses = courseindices.length
+
+		#array of selected courses
+		selectedcourses = []
+		courseindices.each {|index| selectedcourses.push(coursearr[index])}
+
+		numLectures = coursearr.inject(0) {|result, h| result + h[:sessions].length}
+
+		courseArrNoSH = Array.new(numLectures)
+
+		courseArrNoSH.each_with_index do |course, index|
+
+			courseinfo = selectedcourses[index]
+			courseArrNoSH[index] = 
+		end
+
+
+	end
+
 	def createCourseArray (practicehash)
 		@courseArray = Array.new(@totalHours)
 		puts totalHours
@@ -214,8 +211,6 @@ class TotalSchedule
 	attr_accessor :totalAvailabilityArray
 	attr_accessor :totalHours
 	attr_accessor :courseArray
-
-# 		[10, 2], {:title=>"Financial Markets (2008)", :lectureinfo=>{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}}]
 
 end
 
