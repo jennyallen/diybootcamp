@@ -1,10 +1,11 @@
 require 'Date'
 require 'Time'
+require 'icalendar'
 
 def period_to_event(start,period)
 	event = Icalendar::Event.new
-	event.dtstart = start + period.dayoffset + Rational(period.houroffset, 24)
-	event.dend = event.dstart + Rational(1, 24)
+	event.dtstart = start + period.dayOffset + Rational(period.hourOffset, 24)
+	event.dtend = event.dtstart + Rational(1, 24)
 	event.summary = period.coursetitle
 	if period.class == "ClassPeriod"
 		event.description = period.lecturenumber + ": " + period.lecturetitle + "\n" + period.link
@@ -29,6 +30,8 @@ def add_to_cal(cal,start,periods)
 	periods.each do |class_session|
 		cal.add_event(class_session)
 	end
+
+	return cal
 end
 
 # event = Icalendar::Event.new
