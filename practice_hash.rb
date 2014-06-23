@@ -125,8 +125,12 @@ end
 
 class TotalSchedule 
 
-	def initialize(courseHash, indices, hoursPerWeek)
-		@totalHours = indices.inject(0) {|result, index| result + courseHash[index][:time]}
+	def initialize(courses, courseindices, hoursPerWeek)
+		courseindices.each_with_index {|courseindex, i| courseindices[i] = courseindex.to_i}
+
+		@courseindices = courseindices
+		@totalHours = courseindices.inject(0) {|result, index| result + courses[index][:time]}
+		@courses = courses
 		@hoursPerWeek = hoursPerWeek
 		@totalAvailabilityArray = []
 		@courseArray = []
@@ -156,7 +160,7 @@ class TotalSchedule
 		@totalAvailabilityArray
 	end
 
-	def createSingleCourse(hash) 
+	def createSingleCourse(hash)
 		numLectures = hash[:sessions].length
 		singleCourseArr = Array.new(numLectures)
 
@@ -168,13 +172,13 @@ class TotalSchedule
 
 	end
 
-	def createCourseArrNoSH(courses, courseindices)
+	def createCourseArrNoSH
 		#Array of lectures with lectures not in the correct order (each element in the array is a full
 		#list of lectures for each courese)
 		courseArrUnordered = []
-		courseindices.each do |index|
+		@courseindices.each do |index|
 			# puts "Index:" +  index.to_s
-			singleCourseSched = createSingleCourse(courses[index])
+			singleCourseSched = createSingleCourse(@courses[index])
 			# puts "List of courses: " + courses[index].to_s
 			# puts "Single Schedule: " + singleCourseSched.to_s
 			courseArrUnordered.push(singleCourseSched)
@@ -200,13 +204,14 @@ class TotalSchedule
 	end
 
 
-	def createCourseArray (courses, courseindices)
+	def createCourseArray 
 		#course array no study halls 
-		courseArrayNoSH = createCourseArrNoSH(courses, courseindices)
+		courseArrayNoSH = createCourseArrNoSH
 
 		#this one will now include the study halls
 		@courseArray = Array.new(@totalHours)
 		lectureNum = 0
+		coursetitle = ''
 		@courseArray.each_with_index do |session, index|
 			if index.even?			
 				# courseArray[index] = {title: practicehash[:title], lectureinfo: practicehash[:sessions][lectureNum]}
@@ -214,14 +219,13 @@ class TotalSchedule
 
 
 				@courseArray[index] = courseArrayNoSH[lectureNum]
+				
+				coursetitle = courseArrayNoSH[lectureNum]
+
 				lectureNum += 1
-				coursetitle = ''
-				if courseArrayNoSH[lectureNum].class == ClassPeriod
-					coursetitle = courseArrayNoSh[lectureNum]
-				end
 
 			else
-				studyhall = StudyHall.new("Study Hall")
+				studyhall = StudyHall.new(coursetitle)
 				# puts studyhall
 				@courseArray[index] = studyhall
 			end
@@ -229,7 +233,7 @@ class TotalSchedule
 		@courseArray
 	end
 
-	def createScheduleArray(practicehash)
+	def createScheduleArray
 
 		@courseArray.each_with_index do |course, index|
 			course.hourOffset = @totalAvailabilityArray[index][0]

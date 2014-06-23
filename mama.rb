@@ -171,15 +171,10 @@ post '/scheduler/yournewschedule' do
 	# 	hash[:totalHours] = endtime - starttime
 	# end
 
-<<<<<<< HEAD
-
-	daysOfWeek.each do |day, hash|
-=======
 	#Figures out the slots of time that are available each week
 	weekavail = WeekAvailability.new
 
 	daysOfWeek.each do |day|
->>>>>>> 4625b14fd0275488fb6a81dc756ece5d7010f9e4
 		starttime = timeToNum(params[day+"-starttime"])
 	 	endtime = timeToNum(params[day+"-endtime"])
 	 	#Find slots of time that are available each day
@@ -211,27 +206,30 @@ post '/scheduler/yournewschedule' do
 
 	#create a schedule of weekly availability
 	weeklysched = weeksched.createSchedule
-	puts weeklysched
+	# puts weeklysched
 
 	#create total schedule 
-	totalsched = TotalSchedule.new(58, hoursperweek.to_i)
+	puts session['selectedcourses']
+	totalsched = TotalSchedule.new(stored_courses, session['selectedcourses'], hoursperweek)
 
-	h = {:professor=>"Shiller, Robert J.", :number=>"ECON 252", :link=>"/economics/econ-252-08", :department=>"Economics", :department_link=>"/economics", :title=>"Financial Markets (2008)", :sessions=>[{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}, {:title=>"The Universal Principle of Risk Management: Pooling and the Hedging of Risks", :link=>"/economics/econ-252-08/lecture-2"}, {:title=>"Technology and Invention in Finance", :link=>"/economics/econ-252-08/lecture-3"}, {:title=>"Portfolio Diversification and Supporting Financial Institutions (CAPM Model)", :link=>"/economics/econ-252-08/lecture-4"}, {:title=>"Insurance: The Archetypal Risk Management Institution", :link=>"/economics/econ-252-08/lecture-5"}, {:title=>"Efficient Markets vs. Excess Volatility", :link=>"/economics/econ-252-08/lecture-6"}, {:title=>"Behavioral Finance: The Role of Psychology", :link=>"/economics/econ-252-08/lecture-7"}, {:title=>"Human Foibles, Fraud, Manipulation, and Regulation", :link=>"/economics/econ-252-08/lecture-8"}, {:title=>"Guest Lecture by David Swensen", :link=>"/economics/econ-252-08/lecture-9"}, {:title=>"Debt Markets: Term Structure", :link=>"/economics/econ-252-08/lecture-10"}, {:title=>"Midterm Exam 1", :link=>"/economics/econ-252-08/exam-1"}, {:title=>"Stocks", :link=>"/economics/econ-252-08/lecture-11"}, {:title=>"Real Estate Finance and Its Vulnerability to Crisis", :link=>"/economics/econ-252-08/lecture-12"}, {:title=>"Banking: Successes and Failures", :link=>"/economics/econ-252-08/lecture-13"}, {:title=>"Guest Lecture by Andrew Redleaf", :link=>"/economics/econ-252-08/lecture-14"}, {:title=>"Guest Lecture by Carl Icahn", :link=>"/economics/econ-252-08/lecture-15"}, {:title=>"The Evolution and Perfection of Monetary Policy", :link=>"/economics/econ-252-08/lecture-16"}, {:title=>"Midterm Exam 2", :link=>"/economics/econ-252-08/exam-2"}, {:title=>"Investment Banking and Secondary Markets", :link=>"/economics/econ-252-08/lecture-17"}, {:title=>"Professional Money Managers and Their Influence", :link=>"/economics/econ-252-08/lecture-18"}, {:title=>"Brokerage, ECNs, etc.", :link=>"/economics/econ-252-08/lecture-19"}, {:title=>"Guest Lecture by Stephen Schwarzman", :link=>"/economics/econ-252-08/lecture-20"}, {:title=>"Forwards and Futures", :link=>"/economics/econ-252-08/lecture-21"}, {:title=>"Stock Index, Oil and Other Futures Markets", :link=>"/economics/econ-252-08/lecture-22"}, {:title=>"Options Markets", :link=>"/economics/econ-252-08/lecture-23"}, {:title=>"Making It Work for Real People: The Democratization of Finance", :link=>"/economics/econ-252-08/lecture-24"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part I (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-25"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part II (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-26"}, {:title=>"Final Exam", :link=>"/economics/econ-252-08/exam-3"}], :time=>58}
+	# h = {:professor=>"Shiller, Robert J.", :number=>"ECON 252", :link=>"/economics/econ-252-08", :department=>"Economics", :department_link=>"/economics", :title=>"Financial Markets (2008)", :sessions=>[{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}, {:title=>"The Universal Principle of Risk Management: Pooling and the Hedging of Risks", :link=>"/economics/econ-252-08/lecture-2"}, {:title=>"Technology and Invention in Finance", :link=>"/economics/econ-252-08/lecture-3"}, {:title=>"Portfolio Diversification and Supporting Financial Institutions (CAPM Model)", :link=>"/economics/econ-252-08/lecture-4"}, {:title=>"Insurance: The Archetypal Risk Management Institution", :link=>"/economics/econ-252-08/lecture-5"}, {:title=>"Efficient Markets vs. Excess Volatility", :link=>"/economics/econ-252-08/lecture-6"}, {:title=>"Behavioral Finance: The Role of Psychology", :link=>"/economics/econ-252-08/lecture-7"}, {:title=>"Human Foibles, Fraud, Manipulation, and Regulation", :link=>"/economics/econ-252-08/lecture-8"}, {:title=>"Guest Lecture by David Swensen", :link=>"/economics/econ-252-08/lecture-9"}, {:title=>"Debt Markets: Term Structure", :link=>"/economics/econ-252-08/lecture-10"}, {:title=>"Midterm Exam 1", :link=>"/economics/econ-252-08/exam-1"}, {:title=>"Stocks", :link=>"/economics/econ-252-08/lecture-11"}, {:title=>"Real Estate Finance and Its Vulnerability to Crisis", :link=>"/economics/econ-252-08/lecture-12"}, {:title=>"Banking: Successes and Failures", :link=>"/economics/econ-252-08/lecture-13"}, {:title=>"Guest Lecture by Andrew Redleaf", :link=>"/economics/econ-252-08/lecture-14"}, {:title=>"Guest Lecture by Carl Icahn", :link=>"/economics/econ-252-08/lecture-15"}, {:title=>"The Evolution and Perfection of Monetary Policy", :link=>"/economics/econ-252-08/lecture-16"}, {:title=>"Midterm Exam 2", :link=>"/economics/econ-252-08/exam-2"}, {:title=>"Investment Banking and Secondary Markets", :link=>"/economics/econ-252-08/lecture-17"}, {:title=>"Professional Money Managers and Their Influence", :link=>"/economics/econ-252-08/lecture-18"}, {:title=>"Brokerage, ECNs, etc.", :link=>"/economics/econ-252-08/lecture-19"}, {:title=>"Guest Lecture by Stephen Schwarzman", :link=>"/economics/econ-252-08/lecture-20"}, {:title=>"Forwards and Futures", :link=>"/economics/econ-252-08/lecture-21"}, {:title=>"Stock Index, Oil and Other Futures Markets", :link=>"/economics/econ-252-08/lecture-22"}, {:title=>"Options Markets", :link=>"/economics/econ-252-08/lecture-23"}, {:title=>"Making It Work for Real People: The Democratization of Finance", :link=>"/economics/econ-252-08/lecture-24"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part I (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-25"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part II (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-26"}, {:title=>"Final Exam", :link=>"/economics/econ-252-08/exam-3"}], :time=>58}
 
 	# totalsched.createAvailabilityArray(h)
 	# totalsched.createCourseArray(h)
 	totalsched.createAvailabilityArray(weeklysched)
-	totalsched.createCourseArray(h)
-	coursearr = totalsched.createScheduleArray(h)
+	totalsched.createCourseArray
+	coursearr = totalsched.createScheduleArray
 
-	cal = Icalendar::Calendar.new
-	cal = add_to_cal(cal,startdate,coursearr)
-	cal_string = cal.to_ical
-
-	File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }
-
-	puts totalsched.to_s
 	puts coursearr.to_s
+
+	# cal = Icalendar::Calendar.new
+	# cal = add_to_cal(cal,startdate,coursearr)
+	# cal_string = cal.to_ical
+
+	# File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }
+
+	# puts totalsched.to_s
+	# puts coursearr.to_s
 
 	# starttime = timeToNum(starttime)
 	# endtime = timeToNum(endtime)
