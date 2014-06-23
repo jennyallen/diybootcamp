@@ -160,6 +160,7 @@ post '/scheduler/yournewschedule' do
 
 	daysOfWeek = {"Sunday"=>{}, "Monday"=>{}, "Tuesday"=>{}, "Wednesday"=>{}, "Thursday"=>{}, "Friday"=>{}, "Saturday"=>{}}
 
+
 	daysOfWeek.each do |day, hash|
 		starttime = timeToNum(params[day+"-starttime"])
 		endtime = timeToNum(params[day+"-endtime"])
@@ -178,7 +179,6 @@ post '/scheduler/yournewschedule' do
 
 	# starttime = timeToNum(starttime)
 	# endtime = timeToNum(endtime)
-
 	erb :availabilitysuccess
 
 end
@@ -192,17 +192,19 @@ end
 # end
 
 post '/courses' do
-	session['pickedcourses'] = true
+	
 	session['selectedcourses'] ||= {}
 	session['selectedcourses'] = params[:item]
 	courses = []
 
 	if params[:item] == nil
+		session['pickedcourses'] = false
 		erb :no_courseselection
 	else
 		session['selectedcourses'].each do |course|
 			courses.push(stored_courses[course.to_i])
 		end
+		session['pickedcourses'] = true
 		erb :coursesuccess, locals: {courses: courses, session: session}
 	end
 end
