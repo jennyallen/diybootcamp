@@ -1,5 +1,5 @@
-require 'Date'
-require 'Time'
+require 'date'
+require 'time'
 require 'icalendar'
 
 def period_to_event(start,period,email)
