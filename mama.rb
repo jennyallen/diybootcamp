@@ -138,12 +138,6 @@ end
 
 
 
-def oneWeekSchedule
-
-end
-
-
-
 post '/scheduler/yournewschedule' do 
 
 	session['pickedschedule'] = true
@@ -160,26 +154,11 @@ post '/scheduler/yournewschedule' do
 		startdate = dateConverter(params['startdate'])
 	end
 
-	daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
-	# daysOfWeek.each do |day, hash|
-	# 	starttime = timeToNum(params[day+"-starttime"])
-	# 	endtime = timeToNum(params[day+"-endtime"])
-	# 	puts "Starttime" + params[day+"-starttime"] + " Parsed Input: " + starttime.to_s
-	# 	puts "EndTime" + params[day+"-endtime"] + " Parsed Input: " + endtime.to_s
-	# 	hash[:availableHours] = createDayArray(starttime, endtime)
-	# 	hash[:totalHours] = endtime - starttime
-	# end
-
-<<<<<<< HEAD
-
-	daysOfWeek.each do |day, hash|
-=======
+	
 	#Figures out the slots of time that are available each week
 	weekavail = WeekAvailability.new
 
 	daysOfWeek.each do |day|
->>>>>>> 4625b14fd0275488fb6a81dc756ece5d7010f9e4
 		starttime = timeToNum(params[day+"-starttime"])
 	 	endtime = timeToNum(params[day+"-endtime"])
 	 	#Find slots of time that are available each day
@@ -238,6 +217,7 @@ post '/scheduler/yournewschedule' do
 
 	# starttime = timeToNum(starttime)
 	# endtime = timeToNum(endtime)
+
 	erb :availabilitysuccess
 
 end
@@ -251,19 +231,17 @@ end
 # end
 
 post '/courses' do
-	
+	session['pickedcourses'] = true
 	session['selectedcourses'] ||= {}
 	session['selectedcourses'] = params[:item]
 	courses = []
 
 	if params[:item] == nil
-		session['pickedcourses'] = false
 		erb :no_courseselection
 	else
 		session['selectedcourses'].each do |course|
 			courses.push(stored_courses[course.to_i])
 		end
-		session['pickedcourses'] = true
 		erb :coursesuccess, locals: {courses: courses, session: session}
 	end
 end

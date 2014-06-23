@@ -217,7 +217,8 @@ class TotalSchedule
 
 				@courseArray[index] = courseArrayNoSH[lectureNum]
 				
-				coursetitle = courseArrayNoSH[lectureNum]
+				#for study halls 
+				coursetitle = courseArrayNoSH[lectureNum].coursetitle
 
 				lectureNum += 1
 

@@ -58,7 +58,7 @@ function TimePicker( picker, settings ) {
     clock.item = {}
 
     clock.item.clear = null
-    clock.item.interval = settings.interval || 30
+    clock.item.interval = settings.interval || 60
     clock.item.disable = ( settings.disable || [] ).slice( 0 )
     clock.item.enable = -(function( collectionDisabled ) {
         return collectionDisabled[ 0 ] === true ? collectionDisabled.shift() : -1
