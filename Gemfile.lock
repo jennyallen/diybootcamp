@@ -3,7 +3,10 @@ GEM
   specs:
     backports (3.6.0)
     icalendar (2.1.0)
+    mini_portile (0.6.0)
     multi_json (1.10.1)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -27,5 +30,6 @@ PLATFORMS
 
 DEPENDENCIES
   icalendar
+  nokogiri
   sinatra
   sinatra-contrib
