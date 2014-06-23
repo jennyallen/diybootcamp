@@ -1,4 +1,7 @@
 $(document).ready(function() {
-    $('.timepicker').pickatime();
-    $('.datepicker').pickadate();
+    $('.timepicker').pickatime({
+    	interval: 60
+	});
+	
+	$('.datepicker').pickadate();
 });
