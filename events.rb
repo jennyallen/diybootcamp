@@ -2,60 +2,56 @@ require 'Date'
 require 'Time'
 require 'icalendar'
 
-def period_to_event(start,period)
+def period_to_event(start,period,email)
 
 	event = Icalendar::Event.new
 	event.dtstart = start + period.dayOffset + Rational(period.hourOffset, 24)
 	event.dtend = event.dtstart + Rational(1, 24)
 
-	puts period.class
+	#puts period.class
 
 	event.alarm do |a|
 	    a.action          = "EMAIL"
-#  	    a.description     = <<-END_OF_MESSAGE
-# From: MAMA <follo.tim@gmail.com>
-# To: BAD_STUDENT <timothy.follo@yale.edu>
-# subject: Mama is cross with you
-# Content-type: text/html
+  	    a.description     = <<-END_OF_MESSAGE
 		
 
-# <h1>Mama Says:</h1>
-# Time to get to work!
-# Class is in session and YOU ARE ALREADY LATE! <a href=#{period.link}>Join in!</a>
-#  	    END_OF_MESSAGE
+<h1>Mama Says:</h1>
+Time to get to work!
+Class is in session and YOU ARE ALREADY LATE! <a href=#{period.link}>Join in!</a>
+ 	    END_OF_MESSAGE
  	    a.summary         = "Mama says..."        # email subject (required)
-	    a.attendee        = %w(mailto:#{session['email']}) # one or more email recipients (required)
+	    a.attendee        = %w(mailto:#{email})# mailto:#{email}) # one or more email recipients (required)
 	    #a.append_attendee "mailto:me-three@my-domain.com"
 	    a.trigger         = "-PT0M" # 15 minutes before
 	    #a.append_attach   Icalendar::Values::Uri.new "ftp://host.com/novo-procs/felizano.exe", "fmttype" => "application/binary" # email attachments (optional)
 	end
 
 	if period.class.to_s == "ClassPeriod"
-		event.summary = "Class" #period.coursetitle.to_s
-		# puts period.coursetitle
-		# puts period.coursetitle.to_s
+		event.summary = period.coursetitle.to_s
+		 puts period.coursetitle
+		 puts period.coursetitle.to_s
 		# puts period.lecturenumber
 		# puts period.lecturetitle
-		# puts period.link
+		 puts period.link
 		event.description = "Session " + (period.lecturenumber + 1).to_s + ": " + period.lecturetitle + "\n" + "http://oyc.yale.edu" + period.link
 	else 
-		event.summary = "Study Hall" #"Study hall for: " + period.coursetitle.to_s
+		event.summary = "Study hall for: " + period.coursetitle.to_s
 		event.description = "Do your homework!"
 	end
 
 	return event
 end
 
-def get_events(start,periods)
+def get_events(start,periods,email)
 	periods.each_with_index do |period, i|
-		periods[i] = period_to_event(start, period)
+		periods[i] = period_to_event(start, period, email)
 	end
 
 	return periods
 end
 
-def add_to_cal(cal,start,periods)
-	classes = get_events(start,periods)
+def add_to_cal(cal,start,periods,email)
+	classes = get_events(start,periods,email)
 
 	periods.each do |class_session|
 		cal.add_event(class_session)

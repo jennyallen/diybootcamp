@@ -140,6 +140,8 @@ end
 
 post '/scheduler/yournewschedule' do 
 
+	session['email'] ||= "marcus.russi@yale.edu"
+
 	session['pickedschedule'] = true
 
 	daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -219,7 +221,7 @@ post '/scheduler/yournewschedule' do
 	#puts coursearr.to_s
 
 	cal = Icalendar::Calendar.new
-	cal = add_to_cal(cal,startdate,coursearr)
+	cal = add_to_cal(cal,startdate,coursearr,session['email'])
 	cal_string = cal.to_ical
 
 	File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }

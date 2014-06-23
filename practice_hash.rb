@@ -183,7 +183,7 @@ class TotalSchedule
 			# puts "List of courses: " + courses[index].to_s
 			# puts "Single Schedule: " + singleCourseSched.to_s
 			courseArrUnordered.push(singleCourseSched)
-			puts courseArrUnordered.to_s
+			#puts courseArrUnordered.to_s
 		end
 
 		#Array of lectures with lectures in the correct order (alternating lectures between each different course)
