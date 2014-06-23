@@ -15,28 +15,28 @@ require 'time'
 enable :sessions
 enable :method_override
 
-cal = Icalendar::Calendar.new
+# cal = Icalendar::Calendar.new
 
-event = cal.event do |e|
-	e.dtstart = DateTime.civil(2014, 6, 13, 8, 30)
-  	e.dtend   = DateTime.civil(2014, 6, 13, 9, 30)
-	e.summary = "This is a summary with params."
-end
+# event = cal.event do |e|
+# 	e.dtstart = DateTime.civil(2014, 6, 13, 8, 30)
+#   	e.dtend   = DateTime.civil(2014, 6, 13, 9, 30)
+# 	e.summary = "This is a summary with params."
+# end
 
-email = "jenjess.jallen@gmail.com"
+# email = "jenjess.jallen@gmail.com"
 
-event.alarm do |a|
-    a.action          = "EMAIL"
-    a.description     = "This is an event reminder" # email body (required)
-    a.summary         = "Mama Homeschool Reminding you!"        # email subject (required)
-    a.attendee        = ["mailto:" + email] # one or more email recipients (required)
-    a.trigger         = "-PT20M" # 15 minutes before
-    # a.append_attach   Icalendar::Values::Uri.new "ftp://host.com/novo-procs/felizano.exe", "fmttype" => "application/binary" # email attachments (optional)
-end
+# event.alarm do |a|
+#     a.action          = "EMAIL"
+#     a.description     = "This is an event reminder" # email body (required)
+#     a.summary         = "Mama Homeschool Reminding you!"        # email subject (required)
+#     a.attendee        = ["mailto:" + email] # one or more email recipients (required)
+#     a.trigger         = "-PT20M" # 15 minutes before
+#     # a.append_attach   Icalendar::Values::Uri.new "ftp://host.com/novo-procs/felizano.exe", "fmttype" => "application/binary" # email attachments (optional)
+# end
 
-cal_string = cal.to_ical
+# cal_string = cal.to_ical
 
-File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }
+# File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }
 
 def convert_to_time (number)
 	if number >= 12
@@ -154,9 +154,21 @@ post '/scheduler/yournewschedule' do
 		startdate = dateConverter(params['startdate'])
 	end
 
-	
+
+	daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+	# daysOfWeek.each do |day, hash|
+	# 	starttime = timeToNum(params[day+"-starttime"])
+	# 	endtime = timeToNum(params[day+"-endtime"])
+	# 	puts "Starttime" + params[day+"-starttime"] + " Parsed Input: " + starttime.to_s
+	# 	puts "EndTime" + params[day+"-endtime"] + " Parsed Input: " + endtime.to_s
+	# 	hash[:availableHours] = createDayArray(starttime, endtime)
+	# 	hash[:totalHours] = endtime - starttime
+	# end
+
 	#Figures out the slots of time that are available each week
 	weekavail = WeekAvailability.new
+
 
 	daysOfWeek.each do |day|
 		starttime = timeToNum(params[day+"-starttime"])
@@ -246,6 +258,10 @@ post '/courses' do
 	end
 end
 
+post '/about' do 
 
+	session['email'] ||= ''
+	session['email'] = params['youremail']
 
-
+	erb :availabilitysuccess
+end 
