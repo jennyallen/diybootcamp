@@ -12,14 +12,14 @@ def period_to_event(start,period,email)
 
 	event.alarm do |a|
 	    a.action          = "EMAIL"
-  	    a.description     = <<-END_OF_MESSAGE
+#   	    a.description     = <<-END_OF_MESSAGE
 		
 
-<h1>Mama Says:</h1>
-Time to get to work!
-Class is in session and YOU ARE ALREADY LATE! <a href=#{period.link}>Join in!</a>
- 	    END_OF_MESSAGE
- 	    a.summary         = "Mama says..."        # email subject (required)
+# <h1>Mama Says:</h1>
+# Time to get to work!
+# Class is in session and YOU ARE ALREADY LATE! <a href=#{period.link}>Join in!</a>
+#  	    END_OF_MESSAGE
+ 	    a.summary         = "A"        # email subject (required)
 	    a.attendee        = %w(mailto:#{email})# mailto:#{email}) # one or more email recipients (required)
 	    #a.append_attendee "mailto:me-three@my-domain.com"
 	    a.trigger         = "-PT0M" # 15 minutes before
@@ -28,14 +28,20 @@ Class is in session and YOU ARE ALREADY LATE! <a href=#{period.link}>Join in!</a
 
 	if period.class.to_s == "ClassPeriod"
 		event.summary = period.coursetitle.to_s
-		 puts period.coursetitle
-		 puts period.coursetitle.to_s
-		# puts period.lecturenumber
-		# puts period.lecturetitle
-		 puts period.link
-		event.description = "Session " + (period.lecturenumber + 1).to_s + ": " + period.lecturetitle + "\n" + "http://oyc.yale.edu" + period.link
+		 # puts ""
+		 # puts period.coursetitle
+		 # puts period.coursetitle.to_s
+		 # puts period.lecturenumber
+		 # puts period.lecturetitle
+		 # puts period.link
+		#event.description = "Session " + (period.lecturenumber + 1).to_s + ": " + period.lecturetitle + "\n" + "http://oyc.yale.edu" + period.link
+		event.description = "http://oyc.yale.edu" + period.link
+		puts event.description
+		puts "#{email}"
 	else 
+		puts ""
 		event.summary = "Study hall for: " + period.coursetitle.to_s
+		#event.description = "Do your homework! " + period.link
 		event.description = "Do your homework!"
 	end
 

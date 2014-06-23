@@ -3,877 +3,618 @@ VERSION:2.0
 PRODID:icalendar-ruby
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_456126531@TimFollo
-DTSTART:20140623T030000
-DTEND:20140623T040000
-DESCRIPTION:Session 1: Introduction: Freeman's Top Five Tips for Studying t
- he Revolution\nhttp://oyc.yale.edu/history/hist-116/lecture-1
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_164214538@TimFollo
+DTSTART:20140628T080000
+DTEND:20140628T090000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-1
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-1>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_498436715@TimFollo
-DTSTART:20140623T040000
-DTEND:20140623T050000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_991573663@TimFollo
+DTSTART:20140628T090000
+DTEND:20140628T100000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_233761267@TimFollo
-DTSTART:20140623T050000
-DTEND:20140623T060000
-DESCRIPTION:Session 2: Being a British Colonist\nhttp://oyc.yale.edu/histor
- y/hist-116/lecture-2
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_184433995@TimFollo
+DTSTART:20140628T100000
+DTEND:20140628T110000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-2
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-2>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_108247738@TimFollo
-DTSTART:20140623T060000
-DTEND:20140623T070000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_17594089@TimFollo
+DTSTART:20140628T110000
+DTEND:20140628T120000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_964330091@TimFollo
-DTSTART:20140623T070000
-DTEND:20140623T080000
-DESCRIPTION:Session 3: Being a British American\nhttp://oyc.yale.edu/histor
- y/hist-116/lecture-3
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_678381175@TimFollo
+DTSTART:20140628T120000
+DTEND:20140628T130000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-3
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-3>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_281252372@TimFollo
-DTSTART:20140630T030000
-DTEND:20140630T040000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_814051606@TimFollo
+DTSTART:20140628T130000
+DTEND:20140628T140000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_390802190@TimFollo
-DTSTART:20140630T040000
-DTEND:20140630T050000
-DESCRIPTION:Session 4: "Ever at Variance and Foolishly Jealous": Intercolon
- ial Relations\nhttp://oyc.yale.edu/history/hist-116/lecture-4
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_22804907@TimFollo
+DTSTART:20140705T080000
+DTEND:20140705T090000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-4
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-4>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_229774357@TimFollo
-DTSTART:20140630T050000
-DTEND:20140630T060000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_934861474@TimFollo
+DTSTART:20140705T090000
+DTEND:20140705T100000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_762451037@TimFollo
-DTSTART:20140630T060000
-DTEND:20140630T070000
-DESCRIPTION:Session 5: Outraged Colonials: The Stamp Act Crisis\nhttp://oyc
- .yale.edu/history/hist-116/lecture-5
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_765982044@TimFollo
+DTSTART:20140705T100000
+DTEND:20140705T110000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-5
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-5>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_664304498@TimFollo
-DTSTART:20140630T070000
-DTEND:20140630T080000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_752033444@TimFollo
+DTSTART:20140705T110000
+DTEND:20140705T120000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_930438799@TimFollo
-DTSTART:20140707T030000
-DTEND:20140707T040000
-DESCRIPTION:Session 6: Resistance or Rebellion? (Or\, What the Heck is Happ
- ening in Boston?)\nhttp://oyc.yale.edu/history/hist-116/lecture-6
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_597344184@TimFollo
+DTSTART:20140705T120000
+DTEND:20140705T130000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-6
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-6>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_487899987@TimFollo
-DTSTART:20140707T040000
-DTEND:20140707T050000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_985608986@TimFollo
+DTSTART:20140705T130000
+DTEND:20140705T140000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_552337503@TimFollo
-DTSTART:20140707T050000
-DTEND:20140707T060000
-DESCRIPTION:Session 7: Being a Revolutionary\nhttp://oyc.yale.edu/history/h
- ist-116/lecture-7
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_866809406@TimFollo
+DTSTART:20140712T080000
+DTEND:20140712T090000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-7
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-7>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_399375269@TimFollo
-DTSTART:20140707T060000
-DTEND:20140707T070000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_575155314@TimFollo
+DTSTART:20140712T090000
+DTEND:20140712T100000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_380285706@TimFollo
-DTSTART:20140707T070000
-DTEND:20140707T080000
-DESCRIPTION:Session 8: The Logic of Resistance\nhttp://oyc.yale.edu/history
- /hist-116/lecture-8
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_95308678@TimFollo
+DTSTART:20140712T100000
+DTEND:20140712T110000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-8
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-8>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_171092693@TimFollo
-DTSTART:20140714T030000
-DTEND:20140714T040000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_287582959@TimFollo
+DTSTART:20140712T110000
+DTEND:20140712T120000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_241038670@TimFollo
-DTSTART:20140714T040000
-DTEND:20140714T050000
-DESCRIPTION:Session 9: Who Were the Loyalists?\nhttp://oyc.yale.edu/history
- /hist-116/lecture-9
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_464241834@TimFollo
+DTSTART:20140712T120000
+DTEND:20140712T130000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-9
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-9>Join in
- !</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_401765475@TimFollo
-DTSTART:20140714T050000
-DTEND:20140714T060000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_90015200@TimFollo
+DTSTART:20140712T130000
+DTEND:20140712T140000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_933890692@TimFollo
-DTSTART:20140714T060000
-DTEND:20140714T070000
-DESCRIPTION:Session 10: Common Sense\nhttp://oyc.yale.edu/history/hist-116/
- lecture-10
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_922116919@TimFollo
+DTSTART:20140719T080000
+DTEND:20140719T090000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-10
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-10>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_927245353@TimFollo
-DTSTART:20140714T070000
-DTEND:20140714T080000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_134207898@TimFollo
+DTSTART:20140719T090000
+DTEND:20140719T100000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_637112845@TimFollo
-DTSTART:20140721T030000
-DTEND:20140721T040000
-DESCRIPTION:Session 11: Independence\nhttp://oyc.yale.edu/history/hist-116/
- lecture-11
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_436045058@TimFollo
+DTSTART:20140719T100000
+DTEND:20140719T110000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-11
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-11>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_363799200@TimFollo
-DTSTART:20140721T040000
-DTEND:20140721T050000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_745015913@TimFollo
+DTSTART:20140719T110000
+DTEND:20140719T120000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_789069602@TimFollo
-DTSTART:20140721T050000
-DTEND:20140721T060000
-DESCRIPTION:Session 12: Civil War\nhttp://oyc.yale.edu/history/hist-116/lec
- ture-12
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_325488888@TimFollo
+DTSTART:20140719T120000
+DTEND:20140719T130000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-12
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-12>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_521255605@TimFollo
-DTSTART:20140721T060000
-DTEND:20140721T070000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_192632008@TimFollo
+DTSTART:20140719T130000
+DTEND:20140719T140000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_115755549@TimFollo
-DTSTART:20140721T070000
-DTEND:20140721T080000
-DESCRIPTION:Session 13: Organizing a War\nhttp://oyc.yale.edu/history/hist-
- 116/lecture-13
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_106744539@TimFollo
+DTSTART:20140726T080000
+DTEND:20140726T090000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-13
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-13>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_327453915@TimFollo
-DTSTART:20140728T030000
-DTEND:20140728T040000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_281795186@TimFollo
+DTSTART:20140726T090000
+DTEND:20140726T100000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_95991328@TimFollo
-DTSTART:20140728T040000
-DTEND:20140728T050000
-DESCRIPTION:Session 14: Heroes and Villains\nhttp://oyc.yale.edu/history/hi
- st-116/lecture-14
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_378405843@TimFollo
+DTSTART:20140726T100000
+DTEND:20140726T110000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-14
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-14>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_734222549@TimFollo
-DTSTART:20140728T050000
-DTEND:20140728T060000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_309605774@TimFollo
+DTSTART:20140726T110000
+DTEND:20140726T120000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_174023317@TimFollo
-DTSTART:20140728T060000
-DTEND:20140728T070000
-DESCRIPTION:Session 15: Citizens and Choices: Experiencing the Revolution i
- n New Haven\nhttp://oyc.yale.edu/history/hist-116/lecture-15
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_35541453@TimFollo
+DTSTART:20140726T120000
+DTEND:20140726T130000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-15
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-15>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_416122150@TimFollo
-DTSTART:20140728T070000
-DTEND:20140728T080000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_336796150@TimFollo
+DTSTART:20140726T130000
+DTEND:20140726T140000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_658431573@TimFollo
-DTSTART:20140804T030000
-DTEND:20140804T040000
-DESCRIPTION:Session 16: The Importance of George Washington\nhttp://oyc.yal
- e.edu/history/hist-116/lecture-16
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_790264932@TimFollo
+DTSTART:20140802T080000
+DTEND:20140802T090000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-16
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-16>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_966063701@TimFollo
-DTSTART:20140804T040000
-DTEND:20140804T050000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_366093273@TimFollo
+DTSTART:20140802T090000
+DTEND:20140802T100000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_508447543@TimFollo
-DTSTART:20140804T050000
-DTEND:20140804T060000
-DESCRIPTION:Session 17: The Logic of a Campaign (or\, How in the World Did 
- We Win?)\nhttp://oyc.yale.edu/history/hist-116/lecture-17
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_933226799@TimFollo
+DTSTART:20140802T100000
+DTEND:20140802T110000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-17
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-17>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_728714735@TimFollo
-DTSTART:20140804T060000
-DTEND:20140804T070000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_97359751@TimFollo
+DTSTART:20140802T110000
+DTEND:20140802T120000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_161742788@TimFollo
-DTSTART:20140804T070000
-DTEND:20140804T080000
-DESCRIPTION:Session 18: Fighting the Revolution: The Big Picture\nhttp://oy
- c.yale.edu/history/hist-116/lecture-18
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_312219856@TimFollo
+DTSTART:20140802T120000
+DTEND:20140802T130000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-18
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-18>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_458831594@TimFollo
-DTSTART:20140811T030000
-DTEND:20140811T040000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_811385928@TimFollo
+DTSTART:20140802T130000
+DTEND:20140802T140000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_781807321@TimFollo
-DTSTART:20140811T040000
-DTEND:20140811T050000
-DESCRIPTION:Session 19: War and Society\nhttp://oyc.yale.edu/history/hist-1
- 16/lecture-19
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_567061386@TimFollo
+DTSTART:20140809T080000
+DTEND:20140809T090000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-19
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-19>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_433685596@TimFollo
-DTSTART:20140811T050000
-DTEND:20140811T060000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_558522140@TimFollo
+DTSTART:20140809T090000
+DTEND:20140809T100000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_171398230@TimFollo
-DTSTART:20140811T060000
-DTEND:20140811T070000
-DESCRIPTION:Session 20: Confederation\nhttp://oyc.yale.edu/history/hist-116
- /lecture-20
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_379328311@TimFollo
+DTSTART:20140809T100000
+DTEND:20140809T110000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-20
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-20>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_771944303@TimFollo
-DTSTART:20140811T070000
-DTEND:20140811T080000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_661783604@TimFollo
+DTSTART:20140809T110000
+DTEND:20140809T120000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_609803525@TimFollo
-DTSTART:20140818T030000
-DTEND:20140818T040000
-DESCRIPTION:Session 21: A Union Without Power\nhttp://oyc.yale.edu/history/
- hist-116/lecture-21
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_749342539@TimFollo
+DTSTART:20140809T120000
+DTEND:20140809T130000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-21
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-21>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_533245172@TimFollo
-DTSTART:20140818T040000
-DTEND:20140818T050000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_805282972@TimFollo
+DTSTART:20140809T130000
+DTEND:20140809T140000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_82241385@TimFollo
-DTSTART:20140818T050000
-DTEND:20140818T060000
-DESCRIPTION:Session 22: The Road to the Constitutional Convention\nhttp://o
- yc.yale.edu/history/hist-116/lecture-22
-SUMMARY:The American Revolution
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_795707431@TimFollo
+DTSTART:20140816T080000
+DTEND:20140816T090000
+DESCRIPTION:http://oyc.yale.edu/history/hist-210/lecture-22
+SUMMARY:The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-22>Join i
- n!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_643167402@TimFollo
-DTSTART:20140818T060000
-DTEND:20140818T070000
+DTSTAMP:20140623T125322Z
+UID:2014-06-23T08:53:22-04:00_279548215@TimFollo
+DTSTART:20140816T090000
+DTEND:20140816T100000
 DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
+SUMMARY:Study hall for: The Early Middle Ages\, 284–1000
 BEGIN:VALARM
 ACTION:EMAIL
 TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
-ATTENDEE:
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_754136767@TimFollo
-DTSTART:20140818T070000
-DTEND:20140818T080000
-DESCRIPTION:Session 23: Creating a Constitution\nhttp://oyc.yale.edu/histor
- y/hist-116/lecture-23
-SUMMARY:The American Revolution
-BEGIN:VALARM
-ACTION:EMAIL
-TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-23>Join i
- n!</a>\n
-SUMMARY:Mama says...
-ATTENDEE:
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_536536156@TimFollo
-DTSTART:20140825T030000
-DTEND:20140825T040000
-DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
-BEGIN:VALARM
-ACTION:EMAIL
-TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
-ATTENDEE:
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_847263766@TimFollo
-DTSTART:20140825T040000
-DTEND:20140825T050000
-DESCRIPTION:Session 24: Creating a Nation\nhttp://oyc.yale.edu/history/hist
- -116/lecture-24
-SUMMARY:The American Revolution
-BEGIN:VALARM
-ACTION:EMAIL
-TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-24>Join i
- n!</a>\n
-SUMMARY:Mama says...
-ATTENDEE:
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_610118057@TimFollo
-DTSTART:20140825T050000
-DTEND:20140825T060000
-DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
-BEGIN:VALARM
-ACTION:EMAIL
-TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
-ATTENDEE:
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_698823871@TimFollo
-DTSTART:20140825T060000
-DTEND:20140825T070000
-DESCRIPTION:Session 25: Being an American: The Legacy of the Revolution\nht
- tp://oyc.yale.edu/history/hist-116/lecture-25
-SUMMARY:The American Revolution
-BEGIN:VALARM
-ACTION:EMAIL
-TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=/history/hist-116/lecture-25>Join i
- n!</a>\n
-SUMMARY:Mama says...
-ATTENDEE:
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-DTSTAMP:20140623T063609Z
-UID:2014-06-23T02:36:09-04:00_366985228@TimFollo
-DTSTART:20140825T070000
-DTEND:20140825T080000
-DESCRIPTION:Do your homework!
-SUMMARY:Study hall for: The American Revolution
-BEGIN:VALARM
-ACTION:EMAIL
-TRIGGER:-P
-DESCRIPTION:		\n\n<h1>Mama Says:</h1>\nTime to get to work!\nClass is in se
- ssion and YOU ARE ALREADY LATE! <a href=http://www.lifehack.org/articles/pr
- oductivity/50-ways-to-increase-your-productivity.html>Join in!</a>\n
-SUMMARY:Mama says...
+SUMMARY:A
 ATTENDEE:
 END:VALARM
 END:VEVENT
