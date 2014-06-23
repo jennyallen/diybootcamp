@@ -6,9 +6,11 @@ require 'open-uri'
 require 'pry'
 require './all_courses.rb'
 require './emailer.rb'
-
-require_relative 'practice_hash'
-require_relative 'scraper'
+require './events.rb'
+require './practice_hash'
+require './scraper.rb'
+require 'date'
+require 'time'
 
 enable :sessions
 enable :method_override
@@ -217,6 +219,11 @@ post '/scheduler/yournewschedule' do
 	totalsched.createCourseArray(h)
 	coursearr = totalsched.createScheduleArray(h)
 
+	cal = Icalendar::Calendar.new
+	cal = add_to_cal(cal,startdate,coursearr)
+	cal_string = cal.to_ical
+
+	File.open('public/newcal.ics', 'w') { |file| file.write(cal_string) }
 
 	puts totalsched.to_s
 	puts coursearr.to_s

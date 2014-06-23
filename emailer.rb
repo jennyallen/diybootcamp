@@ -10,6 +10,7 @@ class Emailer
 	def self.mail(link)
 
 #for some reason this special format cannot have leading whitespace or it breaks!
+#the dash in front of "<<-END_OF_MESSAGE" allows whitespace before the end match
 	    msg = <<-END_OF_MESSAGE
 From: MAMA <follo.tim@gmail.com>
 To: BAD_STUDENT <#{@@address}>
