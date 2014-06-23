@@ -1,6 +1,8 @@
 require 'date'
 require 'time'
 
+MAXNUMLECTURES = 41
+
 class ClassPeriod
 	def initialize(coursetitle, lecturetitle, lecturenumber, link)
 		@coursetitle = coursetitle
@@ -35,7 +37,7 @@ class StudyHall
 	attr_accessor :dayOffset
 end
 
-$practicehash = [{:professor=>"Saltzman, W. Mark", :number=>"BENG 100", :link=>"/biomedical-engineering/beng-100", :department=>"Biomedical Engineering", :department_link=>"/biomedical-engineering", :title=>"Frontiers of Biomedical Engineering", :sessions=>[{:title=>"What Is Biomedical Engineering?", :link=>"/biomedical-engineering/beng-100/lecture-1"}, {:title=>"What Is Biomedical Engineering? (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-2"}, {:title=>"Genetic Engineering", :link=>"/biomedical-engineering/beng-100/lecture-3"}, {:title=>"Genetic Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-4"}, {:title=>"Cell Culture Engineering", :link=>"/biomedical-engineering/beng-100/lecture-5"}, {:title=>"Cell Culture Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-6"}, {:title=>"Cell Communication and Immunology", :link=>"/biomedical-engineering/beng-100/lecture-7"}, {:title=>"Cell Communication and Immunology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-8"}, {:title=>"Biomolecular Engineering: Engineering of Immunity", :link=>"/biomedical-engineering/beng-100/lecture-9"}, {:title=>"Biomolecular Engineering: Engineering of Immunity (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-10"}, {:title=>"Biomolecular Engineering: General Concepts", :link=>"/biomedical-engineering/beng-100/lecture-11"}, {:title=>"Biomolecular Engineering: General Concepts (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-12"}, {:title=>"Cardiovascular Physiology", :link=>"/biomedical-engineering/beng-100/lecture-13"}, {:title=>"Cardiovascular Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-14"}, {:title=>"Cardiovascular Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-15"}, {:title=>"Midterm Exam", :link=>"/biomedical-engineering/beng-100/exam-1"}, {:title=>"Renal Physiology", :link=>"/biomedical-engineering/beng-100/lecture-16"}, {:title=>"Renal Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-17"}, {:title=>"Biomechanics and Orthopedics", :link=>"/biomedical-engineering/beng-100/lecture-18"}, {:title=>"Biomechanics and Orthopedics (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-19"}, {:title=>"Bioimaging", :link=>"/biomedical-engineering/beng-100/lecture-20"}, {:title=>"Bioimaging (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-21"}, {:title=>"Tissue Engineering", :link=>"/biomedical-engineering/beng-100/lecture-22"}, {:title=>"Tissue Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-23"}, {:title=>"Biomedical Engineers and Cancer", :link=>"/biomedical-engineering/beng-100/lecture-24"}, {:title=>"Biomedical Engineers and Artificial Organs", :link=>"/biomedical-engineering/beng-100/lecture-25"}, {:title=>"Final Exam", :link=>"/biomedical-engineering/beng-100/exam-2"}], :time=>54}{:professor=>"Shiller, Robert J.", :number=>"ECON 252", :link=>"/economics/econ-252-08", :department=>"Economics", :department_link=>"/economics", :title=>"Financial Markets (2008)", :sessions=>[{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}, {:title=>"The Universal Principle of Risk Management: Pooling and the Hedging of Risks", :link=>"/economics/econ-252-08/lecture-2"}, {:title=>"Technology and Invention in Finance", :link=>"/economics/econ-252-08/lecture-3"}, {:title=>"Portfolio Diversification and Supporting Financial Institutions (CAPM Model)", :link=>"/economics/econ-252-08/lecture-4"}, {:title=>"Insurance: The Archetypal Risk Management Institution", :link=>"/economics/econ-252-08/lecture-5"}, {:title=>"Efficient Markets vs. Excess Volatility", :link=>"/economics/econ-252-08/lecture-6"}, {:title=>"Behavioral Finance: The Role of Psychology", :link=>"/economics/econ-252-08/lecture-7"}, {:title=>"Human Foibles, Fraud, Manipulation, and Regulation", :link=>"/economics/econ-252-08/lecture-8"}, {:title=>"Guest Lecture by David Swensen", :link=>"/economics/econ-252-08/lecture-9"}, {:title=>"Debt Markets: Term Structure", :link=>"/economics/econ-252-08/lecture-10"}, {:title=>"Midterm Exam 1", :link=>"/economics/econ-252-08/exam-1"}, {:title=>"Stocks", :link=>"/economics/econ-252-08/lecture-11"}, {:title=>"Real Estate Finance and Its Vulnerability to Crisis", :link=>"/economics/econ-252-08/lecture-12"}, {:title=>"Banking: Successes and Failures", :link=>"/economics/econ-252-08/lecture-13"}, {:title=>"Guest Lecture by Andrew Redleaf", :link=>"/economics/econ-252-08/lecture-14"}, {:title=>"Guest Lecture by Carl Icahn", :link=>"/economics/econ-252-08/lecture-15"}, {:title=>"The Evolution and Perfection of Monetary Policy", :link=>"/economics/econ-252-08/lecture-16"}, {:title=>"Midterm Exam 2", :link=>"/economics/econ-252-08/exam-2"}, {:title=>"Investment Banking and Secondary Markets", :link=>"/economics/econ-252-08/lecture-17"}, {:title=>"Professional Money Managers and Their Influence", :link=>"/economics/econ-252-08/lecture-18"}, {:title=>"Brokerage, ECNs, etc.", :link=>"/economics/econ-252-08/lecture-19"}, {:title=>"Guest Lecture by Stephen Schwarzman", :link=>"/economics/econ-252-08/lecture-20"}, {:title=>"Forwards and Futures", :link=>"/economics/econ-252-08/lecture-21"}, {:title=>"Stock Index, Oil and Other Futures Markets", :link=>"/economics/econ-252-08/lecture-22"}, {:title=>"Options Markets", :link=>"/economics/econ-252-08/lecture-23"}, {:title=>"Making It Work for Real People: The Democratization of Finance", :link=>"/economics/econ-252-08/lecture-24"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part I (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-25"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part II (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-26"}, {:title=>"Final Exam", :link=>"/economics/econ-252-08/exam-3"}], :time=>58}, ]
+$practicehash = [{:professor=>"Saltzman, W. Mark", :number=>"BENG 100", :link=>"/biomedical-engineering/beng-100", :department=>"Biomedical Engineering", :department_link=>"/biomedical-engineering", :title=>"Frontiers of Biomedical Engineering", :sessions=>[{:title=>"What Is Biomedical Engineering?", :link=>"/biomedical-engineering/beng-100/lecture-1"}, {:title=>"What Is Biomedical Engineering? (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-2"}, {:title=>"Genetic Engineering", :link=>"/biomedical-engineering/beng-100/lecture-3"}, {:title=>"Genetic Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-4"}, {:title=>"Cell Culture Engineering", :link=>"/biomedical-engineering/beng-100/lecture-5"}, {:title=>"Cell Culture Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-6"}, {:title=>"Cell Communication and Immunology", :link=>"/biomedical-engineering/beng-100/lecture-7"}, {:title=>"Cell Communication and Immunology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-8"}, {:title=>"Biomolecular Engineering: Engineering of Immunity", :link=>"/biomedical-engineering/beng-100/lecture-9"}, {:title=>"Biomolecular Engineering: Engineering of Immunity (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-10"}, {:title=>"Biomolecular Engineering: General Concepts", :link=>"/biomedical-engineering/beng-100/lecture-11"}, {:title=>"Biomolecular Engineering: General Concepts (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-12"}, {:title=>"Cardiovascular Physiology", :link=>"/biomedical-engineering/beng-100/lecture-13"}, {:title=>"Cardiovascular Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-14"}, {:title=>"Cardiovascular Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-15"}, {:title=>"Midterm Exam", :link=>"/biomedical-engineering/beng-100/exam-1"}, {:title=>"Renal Physiology", :link=>"/biomedical-engineering/beng-100/lecture-16"}, {:title=>"Renal Physiology (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-17"}, {:title=>"Biomechanics and Orthopedics", :link=>"/biomedical-engineering/beng-100/lecture-18"}, {:title=>"Biomechanics and Orthopedics (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-19"}, {:title=>"Bioimaging", :link=>"/biomedical-engineering/beng-100/lecture-20"}, {:title=>"Bioimaging (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-21"}, {:title=>"Tissue Engineering", :link=>"/biomedical-engineering/beng-100/lecture-22"}, {:title=>"Tissue Engineering (cont.)", :link=>"/biomedical-engineering/beng-100/lecture-23"}, {:title=>"Biomedical Engineers and Cancer", :link=>"/biomedical-engineering/beng-100/lecture-24"}, {:title=>"Biomedical Engineers and Artificial Organs", :link=>"/biomedical-engineering/beng-100/lecture-25"}, {:title=>"Final Exam", :link=>"/biomedical-engineering/beng-100/exam-2"}], :time=>54}, {:professor=>"Shiller, Robert J.", :number=>"ECON 252", :link=>"/economics/econ-252-08", :department=>"Economics", :department_link=>"/economics", :title=>"Financial Markets (2008)", :sessions=>[{:title=>"Finance and Insurance as Powerful Forces in Our Economy and Society", :link=>"/economics/econ-252-08/lecture-1"}, {:title=>"The Universal Principle of Risk Management: Pooling and the Hedging of Risks", :link=>"/economics/econ-252-08/lecture-2"}, {:title=>"Technology and Invention in Finance", :link=>"/economics/econ-252-08/lecture-3"}, {:title=>"Portfolio Diversification and Supporting Financial Institutions (CAPM Model)", :link=>"/economics/econ-252-08/lecture-4"}, {:title=>"Insurance: The Archetypal Risk Management Institution", :link=>"/economics/econ-252-08/lecture-5"}, {:title=>"Efficient Markets vs. Excess Volatility", :link=>"/economics/econ-252-08/lecture-6"}, {:title=>"Behavioral Finance: The Role of Psychology", :link=>"/economics/econ-252-08/lecture-7"}, {:title=>"Human Foibles, Fraud, Manipulation, and Regulation", :link=>"/economics/econ-252-08/lecture-8"}, {:title=>"Guest Lecture by David Swensen", :link=>"/economics/econ-252-08/lecture-9"}, {:title=>"Debt Markets: Term Structure", :link=>"/economics/econ-252-08/lecture-10"}, {:title=>"Midterm Exam 1", :link=>"/economics/econ-252-08/exam-1"}, {:title=>"Stocks", :link=>"/economics/econ-252-08/lecture-11"}, {:title=>"Real Estate Finance and Its Vulnerability to Crisis", :link=>"/economics/econ-252-08/lecture-12"}, {:title=>"Banking: Successes and Failures", :link=>"/economics/econ-252-08/lecture-13"}, {:title=>"Guest Lecture by Andrew Redleaf", :link=>"/economics/econ-252-08/lecture-14"}, {:title=>"Guest Lecture by Carl Icahn", :link=>"/economics/econ-252-08/lecture-15"}, {:title=>"The Evolution and Perfection of Monetary Policy", :link=>"/economics/econ-252-08/lecture-16"}, {:title=>"Midterm Exam 2", :link=>"/economics/econ-252-08/exam-2"}, {:title=>"Investment Banking and Secondary Markets", :link=>"/economics/econ-252-08/lecture-17"}, {:title=>"Professional Money Managers and Their Influence", :link=>"/economics/econ-252-08/lecture-18"}, {:title=>"Brokerage, ECNs, etc.", :link=>"/economics/econ-252-08/lecture-19"}, {:title=>"Guest Lecture by Stephen Schwarzman", :link=>"/economics/econ-252-08/lecture-20"}, {:title=>"Forwards and Futures", :link=>"/economics/econ-252-08/lecture-21"}, {:title=>"Stock Index, Oil and Other Futures Markets", :link=>"/economics/econ-252-08/lecture-22"}, {:title=>"Options Markets", :link=>"/economics/econ-252-08/lecture-23"}, {:title=>"Making It Work for Real People: The Democratization of Finance", :link=>"/economics/econ-252-08/lecture-24"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part I (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-25"}, {:title=>"Okun Lecture: Learning from and Responding to Financial Crisis, Part II (Guest Lecture by Lawrence Summers)", :link=>"/economics/econ-252-08/lecture-26"}, {:title=>"Final Exam", :link=>"/economics/econ-252-08/exam-3"}], :time=>58}, ]
 
 
 class DayAvailability
@@ -120,13 +122,13 @@ end
 
 class TotalSchedule 
 
-	def initialize(totalHours, hoursPerWeek)
-		@totalHours = totalHours
+	def initialize(courseHash, indices, hoursPerWeek)
+		@totalHours = indices.inject(0) {|result, index| result + courseHash[index][:time]}
 		@hoursPerWeek = hoursPerWeek
 		@totalAvailabilityArray = []
 		@courseArray = []
-		# @availarr = []
 	end
+
 
 
 
@@ -151,47 +153,73 @@ class TotalSchedule
 		@totalAvailabilityArray
 	end
 
-	#course array no study halls
-	def createCourseArrayNoSH(coursearr, courseindices)
-		
+	def createSingleCourse(hash) 
+		numLectures = hash[:sessions].length
+		singleCourseArr = Array.new(numLectures)
 
-		numCourses = courseindices.length
-
-		#array of selected courses
-		selectedcourses = []
-		courseindices.each {|index| selectedcourses.push(coursearr[index])}
-
-		numLectures = coursearr.inject(0) {|result, h| result + h[:sessions].length}
-
-		courseArrNoSH = Array.new(numLectures)
-
-		courseArrNoSH.each_with_index do |course, index|
-
-			courseinfo = selectedcourses[index]
-			courseArrNoSH[index] = 
+		singleCourseArr.each_with_index do |lecture, lectureNum|
+			singleCourseArr[lectureNum] = ClassPeriod.new(hash[:title], hash[:sessions][lectureNum][:title], lectureNum, hash[:sessions][lectureNum][:link])
 		end
 
+		singleCourseArr
 
 	end
 
-	def createCourseArray (practicehash)
+	def createCourseArrNoSH(courses, courseindices)
+		#Array of lectures with lectures not in the correct order (each element in the array is a full
+		#list of lectures for each courese)
+		courseArrUnordered = []
+		courseindices.each do |index|
+			# puts "Index:" +  index.to_s
+			singleCourseSched = createSingleCourse(courses[index])
+			# puts "List of courses: " + courses[index].to_s
+			# puts "Single Schedule: " + singleCourseSched.to_s
+			courseArrUnordered.push(singleCourseSched)
+			puts courseArrUnordered.to_s
+		end
+
+		#Array of lectures with lectures in the correct order (alternating lectures between each different course)
+		blankArr= Array.new(MAXNUMLECTURES)
+
+		courseArrOrdered = []
+
+		courseArrUnordered.inject(blankArr) do |result, sched|
+			courseArrOrdered = result.zip(sched)
+			# puts courseArrOrdered
+		end
+
+		courseArrOrdered = courseArrOrdered.flatten
+
+		courseArrOrdered.delete(nil)
+
+		courseArrOrdered
+
+	end
+
+
+	def createCourseArray (courses, courseindices)
+		#course array no study halls 
+		courseArrayNoSH = createCourseArrNoSH(courses, courseindices)
+
+		#this one will now include the study halls
 		@courseArray = Array.new(@totalHours)
-		puts totalHours
 		lectureNum = 0
 		@courseArray.each_with_index do |session, index|
 			if index.even?			
 				# courseArray[index] = {title: practicehash[:title], lectureinfo: practicehash[:sessions][lectureNum]}
 				# puts session
 
-				course = ClassPeriod.new(practicehash[:title], practicehash[:sessions][lectureNum][:title], lectureNum, practicehash[:sessions][lectureNum][:link])
 
-				puts course
-
-				@courseArray[index] = course
+				@courseArray[index] = courseArrayNoSH[lectureNum]
 				lectureNum += 1
+				coursetitle = ''
+				if courseArrayNoSH[lectureNum].class == ClassPeriod
+					coursetitle = courseArrayNoSh[lectureNum]
+				end
+
 			else
-				studyhall = StudyHall.new(practicehash[:title])
-				puts studyhall
+				studyhall = StudyHall.new("Study Hall")
+				# puts studyhall
 				@courseArray[index] = studyhall
 			end
 		end
