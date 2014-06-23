@@ -265,6 +265,10 @@ post '/courses' do
 	end
 end
 
+post '/about' do 
 
+	session['email'] ||= ''
+	session['email'] = params['youremail']
 
-
+	erb :availabilitysuccess
+end 
