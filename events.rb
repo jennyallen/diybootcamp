@@ -3,6 +3,7 @@ require 'Time'
 require 'icalendar'
 
 def period_to_event(start,period)
+
 	event = Icalendar::Event.new
 	event.dtstart = start + period.dayOffset + Rational(period.hourOffset, 24)
 	event.dtend = event.dtstart + Rational(1, 24)
@@ -10,7 +11,7 @@ def period_to_event(start,period)
 
 	event.alarm do |a|
 	    a.action          = "EMAIL"
-	    a.description     = <<-END_OF_MESSAGE
+ 	    a.description     = <<-END_OF_MESSAGE
 From: MAMA <follo.tim@gmail.com>
 To: BAD_STUDENT <timothy.follo@yale.edu>
 subject: Mama is cross with you
@@ -20,9 +21,9 @@ Content-type: text/html
 <h1>Mama Says:</h1>
 Time to get to work!
 Class is in session and YOU ARE ALREADY LATE! <a href=#{period.link}>Join in!</a>
-	    END_OF_MESSAGE
-	    a.summary         = "Alarm notification"        # email subject (required)
-	    a.attendee        = %w(mailto:timothy.follo@yale.edu) # one or more email recipients (required)
+ 	    END_OF_MESSAGE
+ 	    a.summary         = "Alarm notification"        # email subject (required)
+	    a.attendee        = %w(mailto:timothy.follo@yale.edu mailto:jennifer.allen@yale.edu mailto:joseph.calamia@yale.edu) # one or more email recipients (required)
 	    #a.append_attendee "mailto:me-three@my-domain.com"
 	    a.trigger         = "-PT0M" # 15 minutes before
 	    #a.append_attach   Icalendar::Values::Uri.new "ftp://host.com/novo-procs/felizano.exe", "fmttype" => "application/binary" # email attachments (optional)
