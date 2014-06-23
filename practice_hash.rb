@@ -22,6 +22,9 @@ end
 class StudyHall
 	def initialize(coursetitle)
 		@coursetitle = coursetitle
+		@lecturetitle = "Free study time! But Mama is watching..."
+		@lecturenumber = "Do your homework!"
+		@link = "http://www.lifehack.org/articles/productivity/50-ways-to-increase-your-productivity.html"
 	end
 
 	def updateHourOffset(hour)
